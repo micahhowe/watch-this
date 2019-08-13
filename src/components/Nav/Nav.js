@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 //import {Link} from 'react-router-dom'
 import axios from 'axios'
-//import { setUser } from '../../ducks/reducer'
-//import { logoutUser } from '../../ducks/reducer'
-//import { withRouter } from 'react-router-dom'
-//import { connect } from 'react-redux'
+import { setUser } from '../../ducks/reducer'
+import { logoutUser } from '../../ducks/reducer'
+import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 
-export default class Nav extends Component {
+class Nav extends Component {
     logout = () => {
         axios.get('/auth/logout').then(() => {
           this.props.logoutUser()
@@ -24,12 +24,12 @@ export default class Nav extends Component {
   }
 }
 
-// function mapStateToProps(reduxState) {
-//     const { username } = reduxState
-//     return { username }
-//   }
+function mapStateToProps(reduxState) {
+    const { username } = reduxState
+    return { username }
+  }
 
-// export default connect(
-//     mapStateToProps,
-//     { logoutUser, setUser }
-//   )(withRouter(Nav))
+export default connect(
+    mapStateToProps,
+    { logoutUser, setUser }
+  )(withRouter(Nav))
