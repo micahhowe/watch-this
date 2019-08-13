@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import { connect } from 'react-redux'
-import './Auth.css'
-import {Link} from 'react-router-dom'
-
+import '../Auth/Auth.css'
 
 
 class Auth extends Component {
@@ -55,11 +53,11 @@ class Auth extends Component {
             <div className="Logo">
             W@tch This
             </div>
-            {/* <input
+            <input
               onChange={e => this.handleChange(e, 'usernameInput')}
               type="text"
               placeholder="Username"
-            /> */}
+            />
             <input
               onChange={e => this.handleChange(e, 'emailInput')}
               type="text"
@@ -71,12 +69,12 @@ class Auth extends Component {
               placeholder="Password"
             />
             <div className="auth-buttons">
-                <div className="login">
-                    <button onClick={this.login}>Sign In</button>
-                </div>
                 <div className="register">
-                    or <Link to="/register">create an account</Link>
+                    <button onClick={this.registerUser}>Register</button>
                 </div>
+                {/* <div className="login">
+                    <button onClick={this.login}>Sign In</button>
+                </div> */}
 
             </div>
           </div>
