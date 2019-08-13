@@ -11,7 +11,7 @@ export default class Donation extends Component {
   render() {
     return (
       <div className='Donation'>
-       Donation
+       Stripe Box
       </div>
     )
   }

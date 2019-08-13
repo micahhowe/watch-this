@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import { logoutUser } from '../../ducks/reducer'
@@ -16,11 +16,16 @@ class Nav extends Component {
         })
       }
   render() {
+      console.log(this.props)
       return (
       <div className="Nav">
-         <h3>W@tch This</h3>
-         <h6>USERNAME</h6>
-         <h6>Logout</h6>
+         <h3 onClick={() => this.props.history.push('/dashboard')}>W@tch This</h3>
+         {this.props.username ? (
+          <>
+          <h5>{this.props.username}</h5>
+          </>
+          ) : <h5>USERNAME</h5>}
+         <h5 onClick={this.logout}>Logout</h5>
       </div>
     )
   }

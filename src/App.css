@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -17,6 +16,18 @@
   justify-content: flex-end;
   background-color:lightblue;
 }
-.Nav h3,h6 {
-  margin-right:5%;
+.Nav h3 {
+  margin-right:28%;
+  /* Lets make this percentage responsive based on screen width */
+}
+.Nav h5 {
+  margin-right:3%;
+}
+.Nav h5:hover {
+  color:white;
+}
+.donate-button > img {
+  position: fixed;
+  bottom: 0;
+  max-width:100px;
 }
