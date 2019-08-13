@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import '../Auth/Auth.css'
 
 
-class Auth extends Component {
+class Register extends Component {
   state = {
     usernameInput: '',
     emailInput: '',
@@ -46,9 +46,12 @@ class Auth extends Component {
   render() {
       console.log(this.state.passwordInput)
     return (
-      <div className="Auth">
-        
+      <div className="Register">
+         <div className="back-button" onClick={() => this.props.history.push('/')}>
+          <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" />
+          </div>
         <div className="login-page">
+            
           <div className="inputs-container">
             <div className="Logo">
             W@tch This
@@ -91,4 +94,4 @@ class Auth extends Component {
 export default connect(
     null,
   { setUser }
-)(Auth)
+)(Register)
