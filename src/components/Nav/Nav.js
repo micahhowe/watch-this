@@ -18,7 +18,9 @@ class Nav extends Component {
   render() {
       return (
       <div className="Nav">
-         Nav
+         <h3>W@tch This</h3>
+         <h6>USERNAME</h6>
+         <h6>Logout</h6>
       </div>
     )
   }
