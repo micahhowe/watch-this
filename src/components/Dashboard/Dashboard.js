@@ -40,6 +40,7 @@ class Dashboard extends Component {
             })
           }
           componentDidMount() {
+            this.findFlix()
             this.checkSession()
             }
           checkSession(){
@@ -47,6 +48,7 @@ class Dashboard extends Component {
                 this.props.setUser( res.data.user )
             )}
   render() {
+    //console.log()
     return (
       <div className='Dashboard'>
        <div className="add-flix-form">
