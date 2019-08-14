@@ -4,7 +4,7 @@ const massive = require('massive')
 const session = require('express-session')
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 const authCtrl = require('./authController')
-const watchThisCtrl = require('./watchThisController')
+const flixCtrl = require('./flixController')
 
 
 
@@ -19,11 +19,17 @@ app.use(session({
       maxAge: 1000 * 60 * 60 * 24 * 10
     }
   }))
-
+  //authController
   app.post('/auth/register', authCtrl.register)
   app.post('/auth/login', authCtrl.login)
   app.get('/auth/logout', authCtrl.logout)
   app.get('/auth/me', authCtrl.sessionInfo)
+
+  //flixController
+  //app.get('/api/flix', flixCtrl.userFlix)
+  app.post('/api/flix', flixCtrl.createFlix)
+  //app.delete('/api/flix/:id', flixCtrl.deleteFlix)
+  //app.update('/api/flix/:id', flixCtrl.updateFlix)
 
  
 

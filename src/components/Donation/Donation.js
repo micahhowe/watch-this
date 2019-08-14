@@ -1,10 +1,20 @@
 import React, {Component} from 'react'
 //import {Link} from 'react-router-dom'
+import { connect } from 'react-redux'
+import axios from 'axios'
+import { setUser } from '../../ducks/reducer'
 
-export default class Donation extends Component {
+class Donation extends Component {
   state = {
     
   }
+  componentDidMount() {
+    this.checkSession()
+    }
+  checkSession(){
+    axios.get(`/auth/me`).then(res => 
+        this.props.setUser( res.data.user )
+    )}
   handleChange = (prop, e) => {
     this.setState({[prop]: e.target.value})
   }
@@ -19,3 +29,13 @@ export default class Donation extends Component {
     )
   }
 }
+
+function mapStateToProps(reduxState) {
+    const { user, username } = reduxState
+    return { user, username}
+  }
+
+  export default connect(
+    mapStateToProps,
+    { setUser }
+  )(Donation)

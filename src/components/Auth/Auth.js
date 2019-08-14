@@ -46,7 +46,6 @@ class Auth extends Component {
     })
   }
   render() {
-      console.log(this.state.passwordInput)
     return (
       <div className="Auth">
         
