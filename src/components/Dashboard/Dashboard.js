@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import Flix from '../Flix/Flix.js'
+import './Dashboard.css'
+
 
 
 class Dashboard extends Component {
@@ -63,7 +65,7 @@ class Dashboard extends Component {
         onChange={e => this.handleChange(e, 'image')}
         placeholder="Image URL"
         />
-        <img src={this.state.image} alt='' />
+        <img style={{maxHeight:200}} src={this.state.image} alt='' />
         {/* End of the add flix section */}
         <Link to="/dashboard">
         <button onClick={() => this.createFlix()}>Add Flix</button>
