@@ -40,6 +40,7 @@ class Dashboard extends Component {
             .catch(err => {
               alert('Sorry! Try Adding again.')
             })
+            this.findFlix()
           }
           componentDidMount() {
             this.findFlix()

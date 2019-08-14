@@ -11,7 +11,7 @@ export default class Flix extends Component {
     this.setState({[prop]: e.target.value})
   }
   render() {
-      console.log(this.props)
+      //console.log(this.props)
     return (
     <div className="Flix">
         <div className="single-flix">
