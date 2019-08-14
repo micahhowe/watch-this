@@ -18,6 +18,8 @@ class Dashboard extends Component {
             info:'',
             flixList: []
         }
+        this.deleteFlix = this.deleteFlix.bind(this)
+
     }
         handleChange(e, key) {
             this.setState({
@@ -47,6 +49,13 @@ class Dashboard extends Component {
             axios.get(`/auth/me`).then(res => 
                 this.props.setUser( res.data.user )
             )}
+            deleteFlix(id){
+                axios.delete(`/api/flix/${id}`).then(res => {
+                    this.findFlix()
+                  }).catch(function() {
+                    console.log('Awww Jeez Rick ... could not delete flix');
+                  })
+            }
   render() {
     //console.log()
     return (
@@ -77,10 +86,11 @@ class Dashboard extends Component {
       {this.state.flixList.map(el => (
                         <Flix
                         key={el.flix_title}
+                        id={el.flix_id}
                         title={el.flix_title}
                         image={el.flix_image}
                         info={el.flix_info}
-                        profile_pic={el.profile_pic}
+                        deleteFlix={this.deleteFlix}
                         />
           ))} 
       </div>

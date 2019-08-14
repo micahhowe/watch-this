@@ -1,6 +1,6 @@
 .Register {
     display: flex;
-    background-color:lightblue;
+    background-color:#66CCFF;
   }
   .Register .left,
   .Register .login-page {
@@ -31,13 +31,13 @@
   }
   .auth-buttons > .register > button{
       min-width:80px;
-      background-color:lightblue;
+      background-color:#66CCFF;
       padding:5px;
       border-radius:15px;
   }
   .auth-buttons > .login > button{
     min-width:80px;
-    background-color:lightblue;
+    background-color:#66CCFF;
     padding:5px;
     border-radius:15px;
 }

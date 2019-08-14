@@ -6,3 +6,7 @@
     max-width:100px;
     border-radius:25px;
 }
+.flix-header{
+    display:flex;
+    flex-direction: column;
+}

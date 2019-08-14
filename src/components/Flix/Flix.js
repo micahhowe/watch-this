@@ -11,6 +11,7 @@ export default class Flix extends Component {
     this.setState({[prop]: e.target.value})
   }
   render() {
+      console.log(this.props)
     return (
     <div className="Flix">
         <div className="single-flix">
@@ -21,8 +22,10 @@ export default class Flix extends Component {
                 <h4>
                 {this.props.title}
                 </h4>
-            </div>
                 <span>{this.props.info}</span>
+            </div>
+            <button>Edit</button>
+            <button onClick={() => this.props.deleteFlix(this.props.id)}>Delete</button>
         </div>
     </div>
     )

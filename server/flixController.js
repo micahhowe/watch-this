@@ -12,4 +12,14 @@ module.exports = {
         const flixToAdd = await db.create_flix([user_id, flix_title, flix_info, flix_image, flix_priority])
         res.status(200).send(flixToAdd)
     },
+    deleteFlix:(req, res) => {
+        const db = req.app.get('db')
+        const { id } = req.params;
+        db.delete_flix(id).then (result => {
+            res.status(200).send(result)
+        }).catch(err => {
+            console.log(err)
+            res.status(400).send('you done messed up A-A-RON')
+        })
+      },
 }

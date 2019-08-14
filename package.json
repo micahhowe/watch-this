@@ -40,5 +40,10 @@
     ]
   },
   "main": "server/server.js",
-  "proxy": "http://localhost:3033"
+  "proxy": "http://localhost:3033",
+  "nodemonConfig": {
+    "ignore": ["src/*",
+              "public/*"
+              ]
+  }
 }
