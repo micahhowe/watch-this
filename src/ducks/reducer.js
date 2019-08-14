@@ -3,7 +3,7 @@ const initialState = {
     username: '',
     email: '',
     // user_id: 0,
-    post: ''
+    flix: ''
   }
   
   // ACTION CONSTANTS
@@ -39,8 +39,8 @@ const initialState = {
         const {username, email} = payload
         return {...state, username, email}
       case ADD_FLIX:
-          const{flix_title,flix_image, flix_content} = payload
-          return{...state, flix_title,flix_image, flix_content }
+          const{flix_title,flix_image, flix_info} = payload
+          return{...state, flix_title,flix_image, flix_info }
       default: return state
     }
   }

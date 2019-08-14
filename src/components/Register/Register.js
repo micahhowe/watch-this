@@ -44,7 +44,6 @@ class Register extends Component {
 //     })
 //   }
   render() {
-      console.log(this.state.passwordInput)
     return (
       <div className="Register">
          <div className="back-button" onClick={() => this.props.history.push('/')}>
