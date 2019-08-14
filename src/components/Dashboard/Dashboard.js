@@ -17,7 +17,7 @@ export default class Dashboard extends Component {
       <div className='Dashboard'>
        Dashboard
        <div className="donate-button">
-       <img onClick={() => this.props.history.push('/donate')} src="https://www.stickpng.com/assets/thumbs/5895ce81cba9841eabab606b.png"/>
+       <img onClick={() => this.props.history.push('/donate')} src="https://www.stickpng.com/assets/thumbs/5895ce81cba9841eabab606b.png" alt="Donate Button"/>
        </div>
       </div>
     )

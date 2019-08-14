@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import { logoutUser } from '../../ducks/reducer'

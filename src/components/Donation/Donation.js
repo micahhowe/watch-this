@@ -12,7 +12,7 @@ export default class Donation extends Component {
     return (
       <div className='Donation' >
           <div className="back-button" onClick={() => this.props.history.push('/dashboard')}>
-          <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" />
+          <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" alt="back button" />
           </div>
        <span style={{border: "1px solid black", padding: "50px"}}>Stripe Box</span>
       </div>
