@@ -31,8 +31,8 @@ class Dashboard extends Component {
                 }))
         }
           createFlix = () => {
-            const {title: flix_title, image: flix_image, info: flix_content} = this.state
-            axios.post('/api/flix', {flix_title, flix_image, flix_content}).then(res => {
+            const {title: flix_title, image: flix_image, info: flix_info} = this.state
+            axios.post('/api/flix', {flix_title, flix_image, flix_info}).then(res => {
 
             })
             .catch(err => {
@@ -76,7 +76,7 @@ class Dashboard extends Component {
       <div>
       {this.state.flixList.map(el => (
                         <Flix
-                        key={el.user_id}
+                        key={el.flix_title}
                         title={el.flix_title}
                         image={el.flix_image}
                         info={el.flix_info}
