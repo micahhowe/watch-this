@@ -18,22 +18,22 @@ class Auth extends Component {
       [key]: e.target.value
     })
   }
-  registerUser = () => {
-    const {
-      usernameInput: username,
-      emailInput: email,
-      passwordInput: password,
-    } = this.state
-    axios
-      .post('/auth/register', { username, email, password,})
-      .then(res => {
-        this.props.setUser({ username, email})
-        this.props.history.push('/dashboard')
-      })
-      .catch(err => {
-        alert('Email is already in use.')
-      })
-  }
+//   registerUser = () => {
+//     const {
+//       usernameInput: username,
+//       emailInput: email,
+//       passwordInput: password,
+//     } = this.state
+//     axios
+//       .post('/auth/register', { username, email, password,})
+//       .then(res => {
+//         this.props.setUser({ username, email})
+//         this.props.history.push('/dashboard')
+//       })
+//       .catch(err => {
+//         alert('Email is already in use.')
+//       })
+//   }
   login = () => {
     const {emailInput: email, passwordInput: password} = this.state
     axios.post('/auth/login', {email, password}).then(res => {
@@ -70,21 +70,16 @@ class Auth extends Component {
               type="password"
               placeholder="Password"
             />
-            <div className="auth-buttons">
-                <div className="login">
+                <div className="auth-link">
+                
                     <button onClick={this.login}>Sign In</button>
-                </div>
-                <div className="register">
                     or <Link to="/register">create an account</Link>
                 </div>
-
+                
             </div>
-          </div>
-          <div>
-          
-    </div>
         </div>
-      </div>
+    </div>
+      
     )
   }
 }

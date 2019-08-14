@@ -34,7 +34,7 @@
 .donate-button > img:hover{
   cursor: pointer;
 }
-.Donation > img {
+.Donation > .back-button > img {
   display:flex;
   max-width:80px;
   top: 0;

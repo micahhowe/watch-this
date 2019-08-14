@@ -1,9 +1,9 @@
-.Auth{
+.Register {
     display: flex;
     background-color:lightblue;
   }
-  .Auth .left,
-  .Auth .login-page {
+  .Register .left,
+  .Register .login-page {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     min-height: calc(100vh);
   }
   
-  .Auth .inputs-container {
+  .Register .inputs-container {
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -26,24 +26,36 @@
     background-color:white;
   }
 
-  .Auth input {
+  .Register input {
     font-size: .8rem;
   }
-  .auth-buttons{
-      display:flex;
-      justify-content: space-around;
+  .auth-buttons > .register > button{
+      min-width:80px;
+      background-color:lightblue;
+      padding:5px;
+      border-radius:15px;
   }
-  
-  .auth-link > button{
+  .auth-buttons > .login > button{
     min-width:80px;
     background-color:lightblue;
     padding:5px;
     border-radius:15px;
-    margin: 0 10px 0 0;
 }
-.auth-link {
-    font-size:12px;
-}
-
+  .register{
+    display:flex;
+    flex:1;
+    padding: 0 20% 0 20%;
+  }
+  .login{
+    display:flex;
+    flex:1;
+    padding: 0 20% 0 20%;
+  }
+  .Register > .back-button > img {
+    display:flex;
+    max-width:80px;
+    top: 0;
+    left:0;
+  }
 
   

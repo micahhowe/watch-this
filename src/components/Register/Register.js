@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import { connect } from 'react-redux'
-import '../Auth/Auth.css'
+import './Register.css'
 
 
 class Register extends Component {
@@ -32,17 +32,17 @@ class Register extends Component {
         alert('Email is already in use.')
       })
   }
-  login = () => {
-    const {emailInput: email, passwordInput: password} = this.state
-    axios.post('/auth/login', {email, password}).then(res => {
-      const {username, email} = res.data.user
-      this.props.setUser({username, email})
-      this.props.history.push('/dashboard')
-    })
-    .catch(err => {
-      alert('Sorry! Try again.')
-    })
-  }
+//   login = () => {
+//     const {emailInput: email, passwordInput: password} = this.state
+//     axios.post('/auth/login', {email, password}).then(res => {
+//       const {username, email} = res.data.user
+//       this.props.setUser({username, email})
+//       this.props.history.push('/dashboard')
+//     })
+//     .catch(err => {
+//       alert('Sorry! Try again.')
+//     })
+//   }
   render() {
       console.log(this.state.passwordInput)
     return (
@@ -59,7 +59,7 @@ class Register extends Component {
             <input
               onChange={e => this.handleChange(e, 'usernameInput')}
               type="text"
-              placeholder="Username"
+              placeholder="Desired Username"
             />
             <input
               onChange={e => this.handleChange(e, 'emailInput')}
