@@ -92,7 +92,8 @@ select{
       }
       .top-info{
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
+        justify-content: space-between;
     }
 } 
 
@@ -112,9 +113,12 @@ select{
     .top-info{
         display:flex;
         flex-direction:row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
-    
+    .flix-info > p{
+        display:flex;
+        justify-content: flex-start
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -133,7 +137,7 @@ select{
     .top-info{
         display:flex;
         flex-direction:row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 } 
 
