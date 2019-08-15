@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 @import './components/Auth/Auth.scss';
 @import './components/Register/Register.scss';
@@ -30,13 +31,13 @@
 .donate-button > img:hover{
   cursor: pointer;
 }
-.Donation > .back-button > img {
+.Donation > .back-button {
   display:flex;
   max-width:80px;
   top: 0;
   left:0;
 }
-.Donation > img:hover {
+.Donation:hover {
   cursor: pointer;
 }
 

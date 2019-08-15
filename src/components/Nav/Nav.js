@@ -19,7 +19,7 @@ class Nav extends Component {
       //console.log(this.props)
       return (
       <div className="Nav">
-         <h3 onClick={() => this.props.history.push('/dashboard')}>W@tch This</h3>
+         <h3 onClick={() => this.props.history.push('/dashboard')}>Watch This</h3>
          {this.props.username ? (
           <>
           <h5>{this.props.username}</h5>

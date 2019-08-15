@@ -3,6 +3,10 @@ import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import { connect } from 'react-redux'
 import '../../App.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
+
 
 
 class Register extends Component {
@@ -47,7 +51,9 @@ class Register extends Component {
     return (
       <div className="Register">
          <div className="back-button" onClick={() => this.props.history.push('/')}>
-          <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" alt="Back Button"/>
+         {/* <i class="fas fa-arrow-left"></i> */}
+         <FontAwesomeIcon icon={faArrowLeft} size="4x" />
+          {/* <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" alt="Back Button"/> */}
           </div>
         <div className="login-page">
             

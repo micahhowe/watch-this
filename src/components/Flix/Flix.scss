@@ -1,5 +1,15 @@
+$font: 'Roboto', sans-serif;
+.Flix{
+    font-family: $font;
+    margin: 0 0 5px 0;
+}
 .single-flix{
     display:flex;
+    font-family: $font;
+    border: .5px solid grey;
+    border-radius:25px;
+    padding:5px;
+    margin: 0 4% 0 4%;
 }
 .flix-image{
     max-height:100px;

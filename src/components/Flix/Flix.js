@@ -19,9 +19,9 @@ export default class Flix extends Component {
                 <img className="flix-image" src={this.props.image} alt='this flix visual'/>
             </div>
             <div className="flix-header">
-                <h4>
+                <h3>
                 {this.props.title}
-                </h4>
+                </h3>
                 <span>{this.props.info}</span>
             </div>
             <button>Edit</button>

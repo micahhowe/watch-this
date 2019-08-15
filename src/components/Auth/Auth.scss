@@ -1,7 +1,9 @@
 $babyblue: #66CCFF;
+$font: 'Roboto', monospace;
 .Auth{
     display: flex;
     background-color: $babyblue;
+    font-family: $font;
   }
   .Auth .left,
   .Auth .login-page {

@@ -52,7 +52,7 @@ class Auth extends Component {
         <div className="login-page">
           <div className="inputs-container">
             <div className="Logo">
-            W@tch This
+            Watch This
             </div>
             {/* <input
               onChange={e => this.handleChange(e, 'usernameInput')}

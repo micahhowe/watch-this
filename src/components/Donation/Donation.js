@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 class Donation extends Component {
   state = {
@@ -22,7 +24,9 @@ class Donation extends Component {
     return (
       <div className='Donation' >
           <div className="back-button" onClick={() => this.props.history.push('/dashboard')}>
-          <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" alt="back button" />
+          <FontAwesomeIcon icon={faArrowLeft} size="4x" />
+            
+          {/* <img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Back-Arrow-Png-Image-67338-For-Designing-Projects.png" alt="back button" /> */}
           </div>
        <span style={{border: "1px solid black", padding: "50px"}}>Stripe Box</span>
       </div>

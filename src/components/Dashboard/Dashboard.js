@@ -70,7 +70,7 @@ class Dashboard extends Component {
         
         <input type="text" 
         onChange={e => this.handleChange(e, 'info')}
-        placeholder="Flix info"
+        placeholder="Flix Info"
         />
 
         <input type="text" 
