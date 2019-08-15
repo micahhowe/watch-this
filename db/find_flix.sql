@@ -7,5 +7,8 @@ SELECT * FROM flix
 JOIN users2
 ON flix.user_id = users2.user_id
 
+-- SELECT * FROM flix
+-- WHERE user_id = $1;
+
 
 

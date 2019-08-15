@@ -35,12 +35,12 @@ class Dashboard extends Component {
           createFlix = () => {
             const {title: flix_title, image: flix_image, info: flix_info} = this.state
             axios.post('/api/flix', {flix_title, flix_image, flix_info}).then(res => {
-
+                this.findFlix()
             })
             .catch(err => {
               alert('Sorry! Try Adding again.')
             })
-            this.findFlix()
+            
           }
           componentDidMount() {
             this.findFlix()
@@ -58,7 +58,7 @@ class Dashboard extends Component {
                   })
             }
   render() {
-    //console.log()
+    
     return (
       <div className='Dashboard'>
        <div className="add-flix-form">
@@ -84,7 +84,7 @@ class Dashboard extends Component {
         </Link>
       </div> 
       <div>
-      {this.state.flixList.map(el => (
+      {/* {this.state.flixList.map(el => (
                         <Flix
                         key={el.flix_id}
                         id={el.flix_id}
@@ -93,7 +93,20 @@ class Dashboard extends Component {
                         info={el.flix_info}
                         deleteFlix={this.deleteFlix}
                         />
-          ))} 
+          ))}  */}
+        {this.state.flixList.filter(el => ( el.username === this.props.username)).map((el, i) => (
+                        <div>
+                        <Flix
+                        key={el.flix_id}
+                        id={el.flix_id}
+                        title={el.flix_title}
+                        image={el.flix_image}
+                        info={el.flix_info}
+                        priority={el.flix_priority}
+                        deleteFlix={this.deleteFlix}
+                        />    
+                        </div>
+                    )) }
       </div>
        <div className="donate-button">
             <img onClick={() => this.props.history.push('/donate')} src="https://www.stickpng.com/assets/thumbs/5895ce81cba9841eabab606b.png" alt="Donate Button"/>

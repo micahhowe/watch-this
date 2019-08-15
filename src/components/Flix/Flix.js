@@ -21,10 +21,24 @@ export default class Flix extends Component {
             <div className="flix-content">
                 <img className="flix-image" src={this.props.image} alt='this flix visual'/>
             </div>
+            
             <div className="flix-info">
-                <h3>
-                {this.props.title}
-                </h3>
+                <div className="top-info">
+                    <div className="flix-title">
+                        <h3>
+                        {this.props.title}
+                        </h3>
+                    </div>
+                    <div className="streaming-selection">
+                        <select>
+                            <option value=""></option>
+                            <option value="netflix">Netflix</option>
+                            <option value="hbo">HBO</option>
+                            <option value="prime-video">Prime Video</option>
+                            <option value="hulu">Hulu</option>
+                        </select>
+                    </div>
+                </div>
                 <span>{this.props.info}</span>
             </div>
             <div className="flix-buttons">
@@ -33,6 +47,7 @@ export default class Flix extends Component {
             </div>
             <div className="flix-arrows">
             <FontAwesomeIcon icon={faSortUp} size="3x"/>
+            <h6>{this.props.priority}</h6>
             <FontAwesomeIcon icon={faSortDown} size="3x"/>
             </div>
         </div>
