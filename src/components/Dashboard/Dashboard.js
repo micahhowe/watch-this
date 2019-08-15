@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import Flix from '../Flix/Flix.js'
 import '../../App.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -16,10 +18,11 @@ class Dashboard extends Component {
             title: '',
             image: '',
             info:'',
-            flixList: []
+            flixList: [],
+            hideEditorPick: true
         }
         this.deleteFlix = this.deleteFlix.bind(this)
-
+        this.handleHidden = this.handleHidden.bind(this)
     }
         handleChange(e, key) {
             this.setState({
@@ -42,6 +45,12 @@ class Dashboard extends Component {
             })
             
           }
+          handleHidden = () => {
+              this.setState({
+                  hideEditorPick: !this.state.hideEditorPick
+                })
+          }
+
           componentDidMount() {
             this.findFlix()
             this.checkSession()
@@ -58,7 +67,7 @@ class Dashboard extends Component {
                   })
             }
   render() {
-    
+    const style = this.state.hideEditorPick ? {display: 'none'} : {}
     return (
       <div className='Dashboard'>
        <div className="add-flix-form">
@@ -79,10 +88,18 @@ class Dashboard extends Component {
         />
         <img style={{maxHeight:200}} src={this.state.image} alt='' />
         {/* End of the add flix section */}
-        <Link to="/dashboard">
         <button id="add-flix-button" onClick={() => this.createFlix()}>Add Flix</button>
-        </Link>
       </div> 
+      <div className="editors-picks">
+          <div className="editors-picks-button" onClick={() => this.handleHidden()}>
+             <span id="editor-text">Editors' Picks</span>
+            <FontAwesomeIcon icon={faSortDown} size="1x"/>
+          </div>
+
+            <div id="my-picks" style={style}>
+             (_) (_) (_)
+            </div>
+      </div>
       <div>
       {/* {this.state.flixList.map(el => (
                         <Flix
