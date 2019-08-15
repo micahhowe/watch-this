@@ -86,7 +86,7 @@ class Dashboard extends Component {
       <div>
       {this.state.flixList.map(el => (
                         <Flix
-                        key={el.flix_title}
+                        key={el.flix_id}
                         id={el.flix_id}
                         title={el.flix_title}
                         image={el.flix_image}
