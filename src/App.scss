@@ -2,14 +2,10 @@
   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import './components/Auth/Auth.scss';
+@import './components/Register/Register.scss';
+@import './components/Flix/Flix.scss';
+@import './components/Dashboard/Dashboard.scss';
 
 .Nav{
   display:flex;

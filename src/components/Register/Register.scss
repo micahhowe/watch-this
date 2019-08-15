@@ -1,6 +1,7 @@
+$babyblue: #66CCFF;
 .Register {
     display: flex;
-    background-color:#66CCFF;
+    background-color:$babyblue;
   }
   .Register .left,
   .Register .login-page {
@@ -31,26 +32,26 @@
   }
   .auth-buttons > .register > button{
       min-width:80px;
-      background-color:#66CCFF;
+      background-color:$babyblue;
       padding:5px;
       border-radius:15px;
   }
-  .auth-buttons > .login > button{
-    min-width:80px;
-    background-color:#66CCFF;
-    padding:5px;
-    border-radius:15px;
-}
+//   .auth-buttons > .login > button{
+//     min-width:80px;
+//     background-color:#$babyblue;
+//     padding:5px;
+//     border-radius:15px;
+// }
   .register{
     display:flex;
     flex:1;
     padding: 0 20% 0 20%;
   }
-  .login{
-    display:flex;
-    flex:1;
-    padding: 0 20% 0 20%;
-  }
+  // .login{
+  //   display:flex;
+  //   flex:1;
+  //   padding: 0 20% 0 20%;
+  // }
   .Register > .back-button > img {
     display:flex;
     max-width:80px;

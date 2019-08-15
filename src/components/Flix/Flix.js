@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 //import {Link} from 'react-router-dom'
-import './Flix.css'
+import '../../App.scss'
 
 
 export default class Flix extends Component {

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import { connect } from 'react-redux'
-import './Register.css'
+import '../../App.scss'
 
 
 class Register extends Component {

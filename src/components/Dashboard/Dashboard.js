@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import axios from 'axios'
 import { setUser } from '../../ducks/reducer'
 import Flix from '../Flix/Flix.js'
-import './Dashboard.css'
+import '../../App.scss'
 
 
 

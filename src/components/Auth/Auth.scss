@@ -1,6 +1,7 @@
+$babyblue: #66CCFF;
 .Auth{
     display: flex;
-    background-color:#66CCFF;
+    background-color: $babyblue;
   }
   .Auth .left,
   .Auth .login-page {
@@ -16,7 +17,7 @@
     display: flex;
     flex-direction: column;
     height: 200px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 7px;
     width: 50%;
     align-items: center;
@@ -36,7 +37,7 @@
   
   .auth-link > button{
     min-width:80px;
-    background-color:#66CCFF;
+    background-color:$babyblue;
     padding:5px;
     border-radius:15px;
     margin: 0 10px 0 0;
