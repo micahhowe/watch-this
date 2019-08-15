@@ -13,19 +13,8 @@ $babyblue: #66CCFF;
     margin: 0 4% 0 4%;
     justify-content: space-between;
 }
-.flix-image{
-    display:flex;
-    // VVVV This is a temporary measure to get the image to appear sort of center within flix
-    margin: 12% 0 12% 0;
-    max-height:120px;
-    max-width:120px;
-    border-radius:25px;
-}
-.top-info{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-around;
-}
+
+
 select{
     margin: 20% 0 0 0;
     background-color: $babyblue;
@@ -61,12 +50,49 @@ select{
     .flix-info{
         width:100px;
     }
+    .flix-image{
+        display:flex;
+        // VVVV This is a temporary measure to get the image to appear sort of center within flix
+        margin: 12% 0 12% 0;
+        max-height:80px;
+        max-width:80px;
+        border-radius:25px;
+    }
+    p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .top-info{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .flix-info{
         width:200px;
+    }
+    .flix-image{
+        display:flex;
+        // VVVV This is a temporary measure to get the image to appear sort of center within flix
+        margin: 12% 0 12% 0;
+        max-height:100px;
+        max-width:100px;
+        border-radius:25px;
+    }
+    p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .top-info{
+        display:flex;
+        flex-direction:column;
     }
 } 
 
@@ -75,6 +101,20 @@ select{
     .flix-info{
         width:300px;
     }
+    .flix-image{
+        display:flex;
+        // VVVV This is a temporary measure to get the image to appear sort of center within flix
+        margin: 12% 0 12% 0;
+        max-height:100px;
+        max-width:100px;
+        border-radius:25px;
+    }
+    .top-info{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -82,7 +122,19 @@ select{
     .flix-info{
         width:400px;
     }
-
+    .flix-image{
+        display:flex;
+        // VVVV This is a temporary measure to get the image to appear sort of center within flix
+        margin: 12% 0 12% 0;
+        max-height:120px;
+        max-width:120px;
+        border-radius:25px;
+    }
+    .top-info{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

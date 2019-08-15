@@ -39,7 +39,7 @@ export default class Flix extends Component {
                         </select>
                     </div>
                 </div>
-                <span>{this.props.info}</span>
+                <p>{this.props.info}</p>
             </div>
             <div className="flix-buttons">
                 <button>Edit</button>
