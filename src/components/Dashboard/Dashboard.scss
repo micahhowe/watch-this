@@ -1,11 +1,23 @@
 .Dashboard > .add-flix-form {
-    margin: 0 0 2% 0;
+    margin: 1% 0 1% 0;
 }
 
 .Dashboard > .add-flix-form > img {
     max-height:180px;
     max-width:180px;
 }
+.Dashboard > .add-flix-form > input{
+    margin: 0 1% 0 0;
+    border-radius:15px;
+    border: .5px solid grey;
+    padding:1%;
+}
+
+.Dashboard > .add-flix-form >input:focus {
+    outline: none;
+    border:1px solid $babyblue;
+    box-shadow: 0 0 5px $babyblue;
+  }
 
 #add-flix-button {
     min-width:80px;

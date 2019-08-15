@@ -59,7 +59,7 @@ class Register extends Component {
             
           <div className="inputs-container">
             <div className="Logo">
-            W@tch This
+            Watch This
             </div>
             <input
               onChange={e => this.handleChange(e, 'usernameInput')}

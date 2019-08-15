@@ -30,6 +30,11 @@ $babyblue: #66CCFF;
   .Register input {
     font-size: .8rem;
   }
+  .Register input:focus {
+    outline: none;
+    border:1px solid $babyblue;
+    box-shadow: 0 0 5px $babyblue;
+  }
   .auth-buttons > .register > button{
       min-width:80px;
       background-color:$babyblue;

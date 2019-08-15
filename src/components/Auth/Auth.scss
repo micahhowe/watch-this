@@ -32,6 +32,13 @@ $font: 'Roboto', monospace;
   .Auth input {
     font-size: .8rem;
   }
+  
+  .Auth input:focus {
+    outline: none;
+    border:1px solid $babyblue;
+    box-shadow: 0 0 5px $babyblue;
+  }
+  
   .auth-buttons{
       display:flex;
       justify-content: space-around;
