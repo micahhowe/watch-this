@@ -80,7 +80,7 @@ class Dashboard extends Component {
         <img style={{maxHeight:200}} src={this.state.image} alt='' />
         {/* End of the add flix section */}
         <Link to="/dashboard">
-        <button onClick={() => this.createFlix()}>Add Flix</button>
+        <button id="add-flix-button" onClick={() => this.createFlix()}>Add Flix</button>
         </Link>
       </div> 
       <div>

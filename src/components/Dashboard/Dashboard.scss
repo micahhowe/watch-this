@@ -3,5 +3,13 @@
 }
 
 .Dashboard > .add-flix-form > img {
-    max-height:100px;
+    max-height:180px;
+    max-width:180px;
+}
+
+#add-flix-button {
+    min-width:80px;
+    background-color:$babyblue;
+    padding:5px;
+    border-radius:15px;
 }

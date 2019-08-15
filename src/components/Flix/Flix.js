@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 //import {Link} from 'react-router-dom'
 import '../../App.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { faSortUp } from '@fortawesome/free-solid-svg-icons'
 
 
 export default class Flix extends Component {
@@ -24,8 +27,14 @@ export default class Flix extends Component {
                 </h3>
                 <span>{this.props.info}</span>
             </div>
-            <button>Edit</button>
-            <button onClick={() => this.props.deleteFlix(this.props.id)}>Delete</button>
+            <div className="flix-buttons">
+                <button>Edit</button>
+                <button onClick={() => this.props.deleteFlix(this.props.id)}>Remove</button>
+            </div>
+            <div className="flix-arrows">
+            <FontAwesomeIcon icon={faSortUp} size="3x"/>
+            <FontAwesomeIcon icon={faSortDown} size="3x"/>
+            </div>
         </div>
     </div>
     )
