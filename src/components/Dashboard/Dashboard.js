@@ -7,6 +7,7 @@ import Flix from '../Flix/Flix.js'
 import '../../App.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { faDonate } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -128,7 +129,7 @@ class Dashboard extends Component {
                     )) }
       </div>
        <div className="donate-button">
-            <img onClick={() => this.props.history.push('/donate')} src="https://www.stickpng.com/assets/thumbs/5895ce81cba9841eabab606b.png" alt="Donate Button"/>
+        <FontAwesomeIcon icon={faDonate} size="3x" onClick={() => this.props.history.push('/donate')}/>
        </div>
     </div>
     )

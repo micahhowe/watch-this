@@ -23,12 +23,16 @@
 .Nav h5:hover {
   color:white;
 }
-.donate-button > img {
+.donate-button {
   position: fixed;
   bottom: 0;
   max-width:100px;
+  color: #66CCFF;
+  display:flex;
+  justify-content:center;
+  margin: 5px 0 10px 48%;
 }
-.donate-button > img:hover{
+.donate-button:hover{
   cursor: pointer;
 }
 .Donation > .back-button {
