@@ -14,7 +14,6 @@ export default class Flix extends Component {
         title: '',
         image: '',
         info:'',
-        id: '',
         editFlix : false
         }
         this.updateFlix = this.updateFlix.bind(this)
@@ -29,7 +28,6 @@ export default class Flix extends Component {
     })
   }
   updateFlix(id) {
-      console.log(id)
     const {title: flix_title, image: flix_image, info: flix_info} = this.state
     axios.put(`/api/flix/${id}`, {flix_title, flix_info, flix_image}).then(res => {
         this.props.findFlix()
@@ -79,7 +77,7 @@ export default class Flix extends Component {
                 {editFlix ? (
         null
         ) : (
-          <button onClick={() => this.toggleEdit()}>Edit</button>
+          <button id="single-edit-button" onClick={() => this.toggleEdit()}>Edit</button>
         )}
                    
                  </div>
@@ -92,7 +90,7 @@ export default class Flix extends Component {
             </div>
             {/* Add a big div for everything above */}
             </div>
-            <div className="add-flix-form" style={editStyle}>
+            <div className="edit-flix-form" style={editStyle}>
         <input 
         type="text" 
         onChange={e => this.handleChange(e, 'title')}
@@ -110,8 +108,8 @@ export default class Flix extends Component {
         />
         <img style={{maxHeight:100}} src={this.state.image} alt='' />
         {/* End of the add flix section */}
-        <button onClick={() => this.updateFlix(this.props.id)}>Save</button>
-        <button onClick={() => this.toggleEdit()}>Cancel</button>
+        <button id="save-button" onClick={() => this.updateFlix(this.props.id)}>Save</button>
+        <button id="cancel-button" onClick={() => this.toggleEdit()}>Cancel</button>
       </div> 
            
         </div>

@@ -76,7 +76,6 @@ module.exports = {
     //     res.status(200).send(flix);
     // },
     addFlix: async(req, res, next) => {
-        console.log(req.body)
         const { flix_title, flix_image, flix_content } = req.body
         const {user_id} = req.session.user
         const db = req.app.get('db')
