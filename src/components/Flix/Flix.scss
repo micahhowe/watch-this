@@ -1,6 +1,9 @@
 $font: 'Roboto', sans-serif;
 $babyblue: #66CCFF;
-$cancelred: #ac0d0d;
+$cancelRed: #ff9898;
+$saveGreen: rgb(142, 255, 142);
+$borderGreen: rgb(0, 87, 0);
+$borderRed: rgb(126, 0, 0);
 .Flix{
     font-family: $font;
     margin: 0 0 5px 0;
@@ -61,16 +64,18 @@ select{
 
 #save-button {
     min-width:80px;
-    background-color:$babyblue;
+    background-color:$saveGreen;
     padding:5px;
     border-radius:15px;
+    border: 0.5px solid $borderGreen;
+
 }
 #cancel-button {
     min-width:80px;
     padding:5px;
     border-radius:15px;
-    color: $cancelred;
-    border: 1px solid $cancelred;
+    background-color: $cancelRed;
+    border: 0.5px solid $borderRed;
 }
 .edit-flix-form > input{
     margin: 0 1% 0 0;
