@@ -45,6 +45,7 @@ class Dashboard extends Component {
             })
             
           }
+          
           handleHidden = () => {
               this.setState({
                   hideEditorPick: !this.state.hideEditorPick
@@ -121,6 +122,7 @@ class Dashboard extends Component {
                         info={el.flix_info}
                         priority={el.flix_priority}
                         deleteFlix={this.deleteFlix}
+                        findFlix={this.findFlix}
                         />    
                         </div>
                     )) }

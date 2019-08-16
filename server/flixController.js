@@ -22,4 +22,17 @@ module.exports = {
             res.status(400).send('you done messed up A-A-RON')
         })
       },
+    updateFlix: async (req,res) => {
+        try{const { flix_title, flix_info, flix_image } = req.body
+        const { id } = req.params;
+        const db = req.app.get('db')
+        const flixToUpdate = await db.update_flix([flix_title, flix_info, flix_image, id])
+        res.status(200).send(flixToUpdate)
+    }
+        catch
+            {
+                res.status(400).send('messed up while attempting to edit')
+        }
+        
+    }
 }

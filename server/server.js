@@ -29,7 +29,8 @@ app.use(session({
   app.get('/api/flix', flixCtrl.findFlix)
   app.post('/api/flix', flixCtrl.createFlix)
   app.delete('/api/flix/:id', flixCtrl.deleteFlix)
-  //app.update('/api/flix/:id', flixCtrl.updateFlix)
+  app.put('/api/flix/:id', flixCtrl.updateFlix)
+
 
  
 

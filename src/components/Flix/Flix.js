@@ -4,22 +4,43 @@ import '../../App.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { faSortUp } from '@fortawesome/free-solid-svg-icons'
-let inputStyle = {width:'110px'}
+import axios from 'axios'
 
 
 export default class Flix extends Component {
     constructor(props) {
         super(props)
     this.state = {
+        title: '',
+        image: '',
+        info:'',
+        id: '',
         editFlix : false
         }
+        this.updateFlix = this.updateFlix.bind(this)
+
     }
   toggleEdit() {
     this.setState({ editFlix: !this.state.editFlix })
   }
-  handleChange = (prop, e) => {
-    this.setState({[prop]: e.target.value})
+  handleChange(e, key) {
+    this.setState({
+      [key]: e.target.value
+    })
   }
+  updateFlix(id) {
+      console.log(id)
+    const {title: flix_title, image: flix_image, info: flix_info} = this.state
+    axios.put(`/api/flix/${id}`, {flix_title, flix_info, flix_image}).then(res => {
+        this.props.findFlix()
+        this.toggleEdit()
+    })
+    .catch(err => {
+      alert('Sorry! Try Updating again.')
+    })
+    
+  
+}
   
   render() {
       //console.log(this.props)
@@ -89,7 +110,7 @@ export default class Flix extends Component {
         />
         <img style={{maxHeight:100}} src={this.state.image} alt='' />
         {/* End of the add flix section */}
-        <button onClick={() => this.update()}>Save</button>
+        <button onClick={() => this.updateFlix(this.props.id)}>Save</button>
         <button onClick={() => this.toggleEdit()}>Cancel</button>
       </div> 
            
