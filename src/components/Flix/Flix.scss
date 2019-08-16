@@ -12,8 +12,15 @@ $babyblue: #66CCFF;
     padding:0.5% 1% 0.5% 1%;
     margin: 0 4% 0 4%;
     justify-content: space-between;
+    flex-direction: column;
 }
-
+.flix-top-level{
+    display:flex;
+    justify-content:space-between;
+}
+.flix-lower-level{
+    display:flex;
+}
 
 select{
     margin: 20% 0 0 0;
