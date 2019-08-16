@@ -44,7 +44,11 @@ class Dashboard extends Component {
             .catch(err => {
               alert('Sorry! Try Adding again.')
             })
-            
+            this.setState({
+                title: '',
+                image: '',
+                info: ''
+            })
           }
           
           handleHidden = () => {
@@ -77,19 +81,27 @@ class Dashboard extends Component {
         type="text" 
         onChange={e => this.handleChange(e, 'title')}
         placeholder="Flix Title"
+        value={this.state.title}
         />
         
         <input type="text" 
         onChange={e => this.handleChange(e, 'info')}
         placeholder="Flix Info"
+        value={this.state.info}
         />
 
         <input type="text" 
         onChange={e => this.handleChange(e, 'image')}
         placeholder="Image URL"
+        value={this.state.image}
         />
-        <img style={{maxHeight:200}} src={this.state.image} alt='' />
+        {this.state.image.length > 7 ? (
+          <>
+            <img style={{maxHeight:200}} src={this.state.image} alt='' />          
+          </>
+          ) : null}
         {/* End of the add flix section */}
+
         <button id="add-flix-button" onClick={() => this.createFlix()}>Add Flix</button>
       </div> 
       <div className="editors-picks">

@@ -17,7 +17,6 @@ export default class Flix extends Component {
         editFlix : false
         }
         this.updateFlix = this.updateFlix.bind(this)
-
     }
   toggleEdit() {
     this.setState({ editFlix: !this.state.editFlix })
@@ -36,9 +35,13 @@ export default class Flix extends Component {
     .catch(err => {
       alert('Sorry! Try Updating again.')
     })
-    
-  
+    this.setState({
+        title: '',
+        image: '',
+        info: ''
+    })
 }
+
   
   render() {
       //console.log(this.props)
@@ -59,7 +62,7 @@ export default class Flix extends Component {
                         {this.props.title}
                         </h3>
                     </div>
-                    <div className="streaming-selection">
+                    {/* <div className="streaming-selection">
                         <select>
                             <option value=""></option>
                             <option value="netflix">Netflix</option>
@@ -67,7 +70,7 @@ export default class Flix extends Component {
                             <option value="prime-video">Prime Video</option>
                             <option value="hulu">Hulu</option>
                         </select>
-                    </div>
+                    </div> */}
                 </div>
                 <p>{this.props.info}</p>
             </div>
@@ -94,19 +97,27 @@ export default class Flix extends Component {
         <input 
         type="text" 
         onChange={e => this.handleChange(e, 'title')}
-        placeholder="New Flix Title"
+        placeholder="New Title"
+        value={this.state.title}
         />
         
         <input type="text" 
         onChange={e => this.handleChange(e, 'info')}
-        placeholder="New Flix Info"
+        placeholder="New Info"
+        value={this.state.info}
         />
 
         <input type="text" 
         onChange={e => this.handleChange(e, 'image')}
-        placeholder="New Image URL"
+        placeholder="New URL"
+        value={this.state.image}
         />
-        <img style={{maxHeight:100}} src={this.state.image} alt='' />
+        {this.state.image.length > 7 ? (
+          <>
+            <img style={{maxHeight:200}} src={this.state.image} alt='' />          
+          </>
+          ) : null}
+          {/* ^^^ this is the solution to the get /whatevertheinput value bug is */}
         {/* End of the add flix section */}
         <button id="save-button" onClick={() => this.updateFlix(this.props.id)}>Save</button>
         <button id="cancel-button" onClick={() => this.toggleEdit()}>Cancel</button>
