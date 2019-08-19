@@ -8,6 +8,9 @@
 @import './components/Flix/Flix.scss';
 @import './components/Dashboard/Dashboard.scss';
 
+button{
+  outline: none;
+}
 .Nav{
   display:flex;
   justify-content: flex-end;

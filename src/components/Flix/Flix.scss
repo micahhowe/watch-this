@@ -79,6 +79,11 @@ $borderRed: rgb(126, 0, 0);
     border: .5px solid rgba(133, 133, 133, .5);
     padding:1%;
 }
+.edit-flix-form >input:focus {
+    outline: none;
+    border:1px solid $babyblue;
+    box-shadow: 0 0 5px $babyblue;
+  }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .flix-info{

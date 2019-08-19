@@ -78,7 +78,7 @@ export default class Flix extends Component {
     const editStyle = this.state.editFlix ? {} : { display: 'none' }
     return (
       <div className="Flix">
-        <div className="single-flix" style={this.props.priority >= 8 ? {boxShadow:'2px 0px lightgreen'} : this.props.priority >= 4 ? {boxShadow:'2px 0px yellow'}:{boxShadow:'2px 0px red'}}>
+        <div className="single-flix" style={this.props.priority >= 8 ? {boxShadow:'2px 0px lightgreen'} : this.props.priority > 4 ? {boxShadow:'2px 0px yellow'}:{boxShadow:'2px 0px red'}}>
           <div className="flix-top-level">
             <div className="flix-content">
               <img className="flix-image" src={this.props.image} alt='this flix visual' />
