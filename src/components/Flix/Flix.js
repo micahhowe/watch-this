@@ -78,7 +78,7 @@ export default class Flix extends Component {
     const editStyle = this.state.editFlix ? {} : { display: 'none' }
     return (
       <div className="Flix">
-        <div className="single-flix">
+        <div className="single-flix" style={this.props.priority >= 8 ? {boxShadow:'2px 0px lightgreen'} : this.props.priority >= 4 ? {boxShadow:'2px 0px yellow'}:{boxShadow:'2px 0px red'}}>
           <div className="flix-top-level">
             <div className="flix-content">
               <img className="flix-image" src={this.props.image} alt='this flix visual' />
@@ -117,7 +117,9 @@ export default class Flix extends Component {
             </div>
             <div className="flix-arrows">
               <FontAwesomeIcon onClick={this.props.priority <= 9 ? () => this.increasePriority(this.props.id) : null} icon={faSortUp} size="3x" />
-              <p style={this.props.priority >= 8 ? {textShadow : '2px 2px lightgreen'} : this.props.priority >= 4 ? {textShadow:'2px 2px yellow'}:{textShadow:'1px 1px red'}}>{this.props.priority * 10}% </p>
+              <p>
+              {this.props.priority * 10}% 
+              </p>
               <FontAwesomeIcon onClick={this.props.priority > 0 ? () => this.decreasePriority(this.props.id) : null } icon={faSortDown} size="3x" />
             </div>
             {/* Add a big div for everything above */}
