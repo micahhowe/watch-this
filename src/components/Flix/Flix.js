@@ -150,8 +150,10 @@ export default class Flix extends Component {
             ) : null}
             {/* ^^^ this is the solution to the get /whatevertheinput value bug is */}
             {/* End of the add flix section */}
+            
             <button id="save-button" onClick={() => this.updateFlix(this.props.id)}>Save</button>
             <button id="cancel-button" onClick={() => this.toggleEdit()}>Cancel</button>
+            
           </div>
 
         </div>
