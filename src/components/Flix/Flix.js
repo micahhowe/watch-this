@@ -87,9 +87,9 @@ export default class Flix extends Component {
             <div className="flix-info">
               <div className="top-info">
                 <div className="flix-title">
-                  <h3>
+                  <p className="flix-title-text">
                     {this.props.title}
-                  </h3>
+                  </p>
                 </div>
                 {/* <div className="streaming-selection">
                         <select>
@@ -101,7 +101,7 @@ export default class Flix extends Component {
                         </select>
                     </div> */}
               </div>
-              <p>{this.props.info}</p>
+              <p className="flix-info-text">{this.props.info}</p>
             </div>
             <div className="flix-buttons">
               <div className="edit-button">

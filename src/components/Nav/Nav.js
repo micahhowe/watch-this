@@ -24,7 +24,7 @@ class Nav extends Component {
           <>
           <h5>{this.props.username}</h5>
           </>
-          ) : <h5>USERNAME</h5>}
+          ) : <h5>|</h5>}
          <h5 onClick={this.logout}>Logout</h5>
       </div>
     )
