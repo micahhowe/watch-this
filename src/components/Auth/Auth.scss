@@ -31,7 +31,12 @@ $font: 'Roboto', monospace;
 
   .Auth input {
     font-size: .8rem;
+    margin: 0 1% 0 0;
+    border-radius:15px;
+    border: .5px solid rgba(141, 141, 141, .5);
+    padding:1.5%;
   }
+  
   
   .Auth input:focus {
     outline: none;
