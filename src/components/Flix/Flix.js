@@ -46,7 +46,6 @@ export default class Flix extends Component {
   }
   increasePriority(id) {
     let { flixPriority: flix_priority } = this.state
-    console.log('inc', typeof flix_priority, flix_priority)
       axios.put(`/api/flix/uparrows/${id}`, { flix_priority }).then(res => {
         this.props.findFlix()
       })
@@ -118,7 +117,7 @@ export default class Flix extends Component {
             </div>
             <div className="flix-arrows">
               <FontAwesomeIcon onClick={this.props.priority <= 9 ? () => this.increasePriority(this.props.id) : null} icon={faSortUp} size="3x" />
-              <h6>{this.props.priority * 10}% </h6>
+              <p>{this.props.priority * 10}% </p>
               <FontAwesomeIcon onClick={this.props.priority > 0 ? () => this.decreasePriority(this.props.id) : null } icon={faSortDown} size="3x" />
             </div>
             {/* Add a big div for everything above */}
