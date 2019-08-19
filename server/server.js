@@ -26,6 +26,8 @@ app.use(session({
   app.get('/auth/me', authCtrl.sessionInfo)
 
   //flixController
+  app.put('/api/flix/uparrows/:id', flixCtrl.increasePriority)
+  app.put('/api/flix/downarrows/:id', flixCtrl.decreasePriority)
   app.get('/api/flix', flixCtrl.findFlix)
   app.post('/api/flix', flixCtrl.createFlix)
   app.delete('/api/flix/:id', flixCtrl.deleteFlix)

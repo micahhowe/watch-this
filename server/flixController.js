@@ -33,5 +33,29 @@ module.exports = {
                 res.status(400).send('messed up while attempting to edit')
         }
         
+    },
+    increasePriority: async (req,res) => {
+        try{const { flix_priority } = req.body
+        const { id } = req.params;
+        const db = req.app.get('db')
+        const flixToUpdate = await db.increase_priority([id])
+        res.status(200).send(flixToUpdate)
     }
+        catch
+            {
+                res.status(400).send('messed up while attempting to increase priority')
+        }
+    },
+    decreasePriority: async (req,res) => {
+        try{const { flix_priority } = req.body
+        const { id } = req.params;
+        const db = req.app.get('db')
+        const flixToUpdate = await db.decrease_priority([id])
+        res.status(200).send(flixToUpdate)
+    }
+        catch
+            {
+                res.status(400).send('messed up while attempting to decrease priority')
+        }
+    },
 }

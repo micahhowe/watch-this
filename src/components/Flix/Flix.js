@@ -14,9 +14,12 @@ export default class Flix extends Component {
         title: '',
         image: '',
         info:'',
-        editFlix : false
+        editFlix : false,
+        flixPriority: ''
         }
         this.updateFlix = this.updateFlix.bind(this)
+        this.increasePriority = this.increasePriority.bind(this)
+        this.decreasePriority = this.decreasePriority.bind(this)
     }
   toggleEdit() {
     this.setState({ editFlix: !this.state.editFlix })
@@ -40,7 +43,28 @@ export default class Flix extends Component {
         image: '',
         info: ''
     })
-}
+  }
+    increasePriority(id){
+      const {flixPriority: flix_priority} = this.state
+      axios.put(`/api/flix/uparrows/${id}`, {flix_priority}).then(res => {
+        this.props.findFlix()
+        // this.toggleEdit()
+    })
+    .catch(err => {
+      alert('Sorry! Try increasing again.')
+    })
+    }
+    decreasePriority(id){
+      const {flixPriority: flix_priority} = this.state
+      axios.put(`/api/flix/downarrows/${id}`, {flix_priority}).then(res => {
+        this.props.findFlix()
+        // this.toggleEdit()
+    })
+    .catch(err => {
+      alert('Sorry! Try decreasing again.')
+    })
+    }
+
 
   
   render() {
@@ -87,9 +111,9 @@ export default class Flix extends Component {
                 <button onClick={() => this.props.deleteFlix(this.props.id)}>Remove</button>
             </div>
             <div className="flix-arrows">
-            <FontAwesomeIcon icon={faSortUp} size="3x"/>
+            <FontAwesomeIcon onClick={() => this.increasePriority(this.props.id)} icon={faSortUp} size="3x"/>
             <h6>{this.props.priority}</h6>
-            <FontAwesomeIcon icon={faSortDown} size="3x"/>
+            <FontAwesomeIcon onClick={() => this.decreasePriority(this.props.id)} icon={faSortDown} size="3x"/>
             </div>
             {/* Add a big div for everything above */}
             </div>
