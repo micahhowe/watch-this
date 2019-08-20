@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 //import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import axios from 'axios'
@@ -17,11 +17,11 @@ class Donation extends Component {
 
   }
 
-  onOpened=()=>{
+  onOpened = () => {
     console.log('this is opened')
   }
 
-  onClosed=()=>{
+  onClosed = () => {
     console.log('this is closed')
   }
 
@@ -41,55 +41,59 @@ class Donation extends Component {
 
   componentDidMount() {
     this.checkSession()
-    }
-  checkSession(){
-    axios.get(`/auth/me`).then(res => 
-        this.props.setUser( res.data.user )
-    )}
+  }
+  checkSession() {
+    axios.get(`/auth/me`).then(res =>
+      this.props.setUser(res.data.user)
+    )
+  }
   handleChange = (prop, e) => {
-    this.setState({[prop]: e.target.value})
+    this.setState({ [prop]: e.target.value })
   }
   render() {
     return (
       <div className='Donation' >
-          <div className="back-button" onClick={() => this.props.history.push('/dashboard')}>
+        <div className="back-button" onClick={() => this.props.history.push('/dashboard')}>
           <FontAwesomeIcon icon={faArrowLeft} size="4x" />
-            
-          </div>
-       <span style={{border: "1px solid black", padding: "50px"}}>Stripe Box</span>
-       <StripeCheckout
-          name={`Support Watch This`} //header
-          image={imageUrl}
-          description='Thanks for making a donation!' //subtitle - beneath header
-          stripeKey={process.env.REACT_APP_STRIPE_KEY}
-          token={this.onToken} //fires the call back
-          amount={this.state.amount} //this will be in cents
-          currency="USD" 
-          panelLabel="Submit Donation" //text on the submit button
-          locale="en" 
-          opened={this.onOpened} //fires cb when stripe is opened
-          closed={this.onClosed} //fires cb when stripe is closed
-          allowRememberMe 
-          billingAddress={false}
-          zipCode={false}
-      />
-      {/* <StripeCheckout> */}
+
+        </div>
+        <div className="stripe-elements">
+          <p>Please enter Donation amount in cents! Every cent counts ;) </p>
         <input value={this.state.amount}
-        type='number'
-        onChange={e=>this.setState({amount:+e.target.value})}
-        />
+            type='number'
+            onChange={e => this.setState({ amount: +e.target.value })}
+          />
+          <StripeCheckout
+            name={`Support Watch This`} //header
+            image={imageUrl}
+            description='Thanks for making a donation!' //subtitle - beneath header
+            stripeKey={process.env.REACT_APP_STRIPE_KEY}
+            token={this.onToken} //fires the call back
+            amount={this.state.amount} //this will be in cents
+            currency="USD"
+            panelLabel="Submit Donation" //text on the submit button
+            locale="en"
+            opened={this.onOpened} //fires cb when stripe is opened
+            closed={this.onClosed} //fires cb when stripe is closed
+            allowRememberMe
+            billingAddress={false}
+            zipCode={false}
+            label="Make Donation"
+          />
+          
+        </div>
       </div>
     )
   }
 }
 
 function mapStateToProps(reduxState) {
-    const { user, username } = reduxState
-    return { user, username}
-  }
+  const { user, username } = reduxState
+  return { user, username }
+}
 
-  export default connect(
-    mapStateToProps,
-    { setUser }
-  )(Donation)
- const imageUrl = 'https://cdn.pixabay.com/photo/2014/10/23/10/10/dollar-499481_960_720.jpg'
+export default connect(
+  mapStateToProps,
+  { setUser }
+)(Donation)
+const imageUrl = 'https://cdn.pixabay.com/photo/2014/10/23/10/10/dollar-499481_960_720.jpg'
