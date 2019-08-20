@@ -2,10 +2,10 @@ require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
-const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
+const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET, PUBLISH_KEY, STRIPE_SECRET} = process.env
 const authCtrl = require('./authController')
 const flixCtrl = require('./flixController')
-
+const donationCtrl = require('./donationController')
 
 
 const app = express()
@@ -33,7 +33,8 @@ app.use(session({
   app.delete('/api/flix/:id', flixCtrl.deleteFlix)
   app.put('/api/flix/:id', flixCtrl.updateFlix)
 
-
+  //donationController
+  app.post('/api/payment', donationCtrl.pay)
  
 
 massive(CONNECTION_STRING).then(dbInstance => {
