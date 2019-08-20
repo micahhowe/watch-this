@@ -15,10 +15,6 @@ CREATE TABLE authorization2(
     hash TEXT
 );
 
--- CREATE TABLE account(
---     account_id SERIAL PRIMARY KEY,
---     user_id INT REFERENCES user_info(user_id),
--- );
 
 CREATE TABLE flix(
   flix_id SERIAL PRIMARY KEY,
@@ -27,5 +23,5 @@ CREATE TABLE flix(
   flix_info VARCHAR(200),
   flix_image TEXT,
   flix_priority INT
-  --Not sure if i need the priority or not
+  --The INT REFERENCES is the foreign key
 );
