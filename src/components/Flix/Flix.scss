@@ -128,7 +128,9 @@ $borderRed: rgb(126, 0, 0);
     .edit-flix-form > button{
         width:45%;
     }
-    
+    .hidden-buttons > button{
+        margin: 3px 5px 0 0;
+    }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -164,7 +166,10 @@ $borderRed: rgb(126, 0, 0);
     .edit-flix-form{
         display:flex;
         flex-direction:row;
-        margin: 6% 3% 6% 3%;
+        margin: 1% 3% 1% 3%;
+    }
+    .hidden-buttons > button{
+        margin: 3px 3px 0 0;
     }
 } 
 
