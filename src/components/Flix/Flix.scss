@@ -126,9 +126,9 @@ $borderRed: rgb(126, 0, 0);
         margin: 0 0 2% 0;
     }
     .edit-flix-form > button{
-        width:49%;
+        width:45%;
     }
-
+    
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -161,7 +161,11 @@ $borderRed: rgb(126, 0, 0);
     .flix-info-text{
         font-size:12px;
     }
-    
+    .edit-flix-form{
+        display:flex;
+        flex-direction:row;
+        margin: 6% 3% 6% 3%;
+    }
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */

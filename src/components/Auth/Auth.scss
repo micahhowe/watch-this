@@ -21,7 +21,7 @@ $font: 'Roboto', monospace;
     height: 200px;
     border: 1px solid black;
     border-radius: 7px;
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
@@ -57,7 +57,60 @@ $font: 'Roboto', monospace;
     margin: 0 10px 0 0;
 }
 .auth-link {
-    font-size:12px;
+    font-size:14px;
+}
+.auth-link > a{
+  color: $babyblue;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .auth-link > button{
+    display: block;
+    margin: 0 15% 4% 15%;
+  }
+  .Auth .inputs-container {
+    width:60%;
+  }
+  .Auth input {
+    width: 65%;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Auth input {
+    width:75%;
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Auth input {
+    width:58%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Auth input {
+    width:50%;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Auth input {
+    font-size: .8rem;
+    margin: 0 1% 0 0;
+    border-radius:15px;
+    border: .5px solid rgba(141, 141, 141, .5);
+    padding:1.5%;
+    width:45%;
+  }
+  .Auth .inputs-container {
+    width: 35%;
+  }
 }
 
 

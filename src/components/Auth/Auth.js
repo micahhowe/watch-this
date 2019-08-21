@@ -72,7 +72,7 @@ class Auth extends Component {
                 <div className="auth-link">
                 
                     <button onClick={this.login}>Sign In</button>
-                    or <Link to="/register">create an account</Link>
+                    or <Link to="/register">Create an account</Link>
                 </div>
                 
             </div>

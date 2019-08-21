@@ -18,7 +18,8 @@ button{
   background-color: #66CCFF;
 }
 .Nav h3 {
-  margin-right:28%;
+  margin-right:36%;
+  margin-left: 25%;
   /* Lets make this percentage responsive based on screen width */
 }
 .Nav h5 {
@@ -42,3 +43,42 @@ button{
   cursor: pointer;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Nav h3 {
+    margin-right:25%;
+    margin-left: 15%;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Nav h3 {
+    margin-right:36%;
+    margin-left: 20%;
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Nav h3 {
+    margin-right:38%;
+    margin-left: 35%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Nav h3 {
+    margin-right:38%;
+    margin-left: 25%;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Nav h3 {
+    margin-right:39.5%;
+    margin-left: 25%;
+  }
+}
