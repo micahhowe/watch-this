@@ -26,13 +26,11 @@ class Donation extends Component {
   }
 
   onToken = (token) => {
-    console.log(token)
     let { amount } = this.state
     amount /= 100
-    console.log(amount)
+    
     token.card = void 0
     axios.post('/api/payment', { token, amount: this.state.amount }).then(res => {
-      console.log(res)
       alert(`Congratulations you paid the Developers of Watch This $${amount}!`)
       //send it back to dashboard
     })

@@ -38,7 +38,9 @@ class Dashboard extends Component {
       }))
   }
   createFlix = () => {
+    console.log('State:', this.state)
     const { title: flix_title, image: flix_image, info: flix_info } = this.state
+    console.log(flix_title, flix_image, flix_info)
     axios.post('/api/flix', { flix_title, flix_image, flix_info }).then(res => {
       this.findFlix()
     })
@@ -50,6 +52,30 @@ class Dashboard extends Component {
       image: '',
       info: ''
     })
+  }
+  addWestWorld = async () => {
+    await this.setState({
+      title: 'Westworld',
+      image: '',
+      info: 'HBO'
+    })
+    this.createFlix()
+  }
+  addStranger = async () => {
+    await this.setState({
+      title: 'Stranger Things',
+      image: '',
+      info: 'Netflix'
+    })
+    this.createFlix()
+  }
+  addLost = async () => {
+    await this.setState({
+      title: 'Lost',
+      image: '',
+      info: 'Hulu'
+    })
+    this.createFlix()
   }
 
   handleHidden = () => {
@@ -113,7 +139,15 @@ class Dashboard extends Component {
           </div>
 
           <div id="my-picks" style={style}>
-            (_) (_) (_)
+            <h2 onClick={() => this.addWestWorld()}>
+              Westworld
+            </h2>
+            <h2 onClick={() => this.addStranger()}>
+              Stranger Things
+            </h2>
+            <h2 onClick={() => this.addLost()}>
+              Lost
+            </h2>
             </div>
         </div>
         <div>
