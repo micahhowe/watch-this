@@ -21,7 +21,8 @@
     "react-stripe-checkout": "^2.6.3",
     "react-stripe-elements": "^4.0.1",
     "redux": "^4.0.4",
-    "stripe": "^7.8.0"
+    "stripe": "^7.8.0",
+    "sweetalert2": "^8.16.2"
   },
   "scripts": {
     "start": "react-scripts start",
