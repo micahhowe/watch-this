@@ -139,16 +139,22 @@ class Dashboard extends Component {
           </div>
 
           <div id="my-picks" style={style}>
-            <h2 onClick={() => this.addWestWorld()}>
-              Westworld
-            </h2>
-            <h2 onClick={() => this.addStranger()}>
-              Stranger Things
-            </h2>
-            <h2 onClick={() => this.addLost()}>
-              Lost
-            </h2>
+            <div className="add-westworld" onClick={() => this.addWestWorld()}>
+              <p>
+                Westworld
+              </p>
             </div>
+            <div className="add-stranger" onClick={() => this.addStranger()}>
+              <p>
+                Stranger Things
+              </p>
+            </div>
+            <div className="add-Lost" onClick={() => this.addLost()}>
+              <p>
+                Lost
+              </p>
+            </div>
+          </div>
         </div>
         <div>
           {/* {this.state.flixList.map(el => (
