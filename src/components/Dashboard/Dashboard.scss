@@ -89,6 +89,17 @@
     max-width:100px;
     border-radius:25px;
 }
+.donate-button {
+    // position: fixed;
+    bottom: 0;
+    max-width:100px;
+    color: #66CCFF;
+    display:flex;
+    justify-content:center;
+    margin: 2% 0 10px 47%;
+    padding-top: 5%;
+    display:block;
+  }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -143,6 +154,17 @@
         min-width:15%;
         margin-right:2%;
     }
+    .donate-button {
+        // position: fixed;
+        bottom: 0;
+        max-width:100px;
+        color: #66CCFF;
+        display:flex;
+        justify-content:center;
+        margin: 2% 0 10px 36%;
+        padding-top: 5%;
+        display:block;
+      }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
