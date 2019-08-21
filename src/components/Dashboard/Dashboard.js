@@ -159,7 +159,7 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
-        <div>
+        <div className="all-flix">
           {/* {this.state.flixList.map(el => (
                         <Flix
                         key={el.flix_id}
