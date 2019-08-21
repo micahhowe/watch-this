@@ -121,11 +121,10 @@ $borderRed: rgb(126, 0, 0);
     }
     .edit-flix-form > input{
         margin: 0 0 1.5% 0;
+        max-height:40px;
     }
     .edit-flix-form > button{
         margin: 0 0 2% 0;
-    }
-    .edit-flix-form > button{
         width:45%;
     }
     .hidden-buttons > button{
@@ -166,10 +165,10 @@ $borderRed: rgb(126, 0, 0);
     .edit-flix-form{
         display:flex;
         flex-direction:row;
-        margin: 1% 3% 1% 3%;
+        margin: 1% 5% 1% 5%;
     }
     .hidden-buttons > button{
-        margin: 3px 3px 0 0;
+        margin: 2px 0 0 0;
     }
 } 
 
@@ -201,6 +200,17 @@ $borderRed: rgb(126, 0, 0);
     .flix-info-text{
         font-size:14px;
     }
+    .edit-flix-form{
+        display:flex;
+        flex-direction:row;
+        margin: 1% 12% 1% 12%;
+    }
+    .hidden-buttons {
+        display:flex;
+    }
+    .hidden-buttons > button{
+        margin-right:5px;
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -227,6 +237,11 @@ $borderRed: rgb(126, 0, 0);
     .flix-info-text{
         font-size:16px;
     }
+    .edit-flix-form{
+        display:flex;
+        flex-direction:row;
+        margin: 1% 14% 1% 14%;
+    }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -248,5 +263,10 @@ $borderRed: rgb(126, 0, 0);
         max-height:200px;
         max-width:200px;
         border-radius:25px;
+    }
+    .edit-flix-form{
+        display:flex;
+        flex-direction:row;
+        margin: 1% 18% 1% 18%;
     }
 }
