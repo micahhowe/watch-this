@@ -56,24 +56,24 @@ class Dashboard extends Component {
   addWestWorld = async () => {
     await this.setState({
       title: 'Westworld',
-      image: '',
-      info: 'HBO'
+      image: 'https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Westworld-season-2-images-700x300.jpg',
+      info: 'Streaming on HBO'
     })
     this.createFlix()
   }
   addStranger = async () => {
     await this.setState({
       title: 'Stranger Things',
-      image: '',
-      info: 'Netflix'
+      image: 'https://img.huffingtonpost.com/asset/5d1cbb332400003500faa584.jpeg?cache=lkpylyusga&ops=scalefit_720_noupscale',
+      info: 'Streaming on Netflix'
     })
     this.createFlix()
   }
   addLost = async () => {
     await this.setState({
       title: 'Lost',
-      image: '',
-      info: 'Hulu'
+      image: 'https://vignette.wikia.nocookie.net/lostpedia/images/6/69/Lost_cast.jpg/revision/latest?cb=20060514183120',
+      info: 'Available on Hulu'
     })
     this.createFlix()
   }
@@ -140,16 +140,19 @@ class Dashboard extends Component {
 
           <div id="my-picks" style={style}>
             <div className="add-westworld" onClick={() => this.addWestWorld()}>
+              <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Westworld-season-2-images-700x300.jpg" alt="westworld characters" />
               <p>
                 Westworld
               </p>
             </div>
             <div className="add-stranger" onClick={() => this.addStranger()}>
+            <img src="https://img.huffingtonpost.com/asset/5d1cbb332400003500faa584.jpeg" alt="stranger things characters" />
               <p>
                 Stranger Things
               </p>
             </div>
-            <div className="add-Lost" onClick={() => this.addLost()}>
+            <div className="add-lost" onClick={() => this.addLost()}>
+            <img src="https://vignette.wikia.nocookie.net/lostpedia/images/6/69/Lost_cast.jpg/revision/latest?cb=20060514183120" alt="lost characters" />
               <p>
                 Lost
               </p>

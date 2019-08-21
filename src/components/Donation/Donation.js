@@ -57,7 +57,7 @@ class Donation extends Component {
 
         </div>
         <div className="stripe-elements">
-          <p>Please enter Donation amount in cents! Every cent counts ;) </p>
+          <p>Please enter Donation amount in cents</p>
         <input value={this.state.amount}
             type='number'
             onChange={e => this.setState({ amount: +e.target.value })}

@@ -222,6 +222,16 @@ $borderRed: rgb(126, 0, 0);
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .single-flix{
+        display:flex;
+        font-family: $font;
+        border: .5px solid rgba(187, 187, 187, .5);
+        border-radius:35px;
+        padding:0.5% 1% 0.5% 1%;
+        margin: 0 8% 0 8%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
     .flix-image{
         display:flex;
         // VVVV This is a temporary measure to get the image to appear sort of center within flix
