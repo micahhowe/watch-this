@@ -40,9 +40,8 @@ class Dashboard extends Component {
       }))
   }
   createFlix = () => {
-    console.log('State:', this.state)
+    
     const { title: flix_title, image: flix_image, info: flix_info } = this.state
-    console.log(flix_title, flix_image, flix_info)
     axios.post('/api/flix', { flix_title, flix_image, flix_info }).then(res => {
       this.findFlix()
     })
@@ -66,7 +65,7 @@ class Dashboard extends Component {
   addStranger = async () => {
     await this.setState({
       title: 'Stranger Things',
-      image: 'https://img.huffingtonpost.com/asset/5d1cbb332400003500faa584.jpeg?cache=lkpylyusga&ops=scalefit_720_noupscale',
+      image: 'https://cdn.vox-cdn.com/thumbor/BbCaCZKm1rjdMHuI2YM96VS8l9s=/0x0:4400x2200/1200x800/filters:focal(1703x505:2407x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/64695953/ST3_Production_Still_4.0.jpg',
       info: 'Streaming on Netflix'
     })
     this.createFlix()
@@ -161,7 +160,7 @@ class Dashboard extends Component {
               </p>
             </div>
             <div className="add-stranger" onClick={() => this.addStranger()}>
-            <img src="https://img.huffingtonpost.com/asset/5d1cbb332400003500faa584.jpeg" alt="stranger things characters" />
+            <img src="https://cdn.vox-cdn.com/thumbor/BbCaCZKm1rjdMHuI2YM96VS8l9s=/0x0:4400x2200/1200x800/filters:focal(1703x505:2407x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/64695953/ST3_Production_Still_4.0.jpg" alt="stranger things characters" />
               <p>
                 Stranger Things
               </p>
