@@ -52,6 +52,9 @@ input {
     margin-right:25%;
     margin-left: 15%;
   }
+  input{
+    font-size:12px;
+  }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -60,6 +63,9 @@ input {
     margin-right:36%;
     margin-left: 20%;
   }
+  input{
+    font-size:14px;
+  }
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -67,6 +73,9 @@ input {
   .Nav h3 {
     margin-right:38%;
     margin-left: 35%;
+  }
+  input{
+    font-size:16px;
   }
 } 
 
