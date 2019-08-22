@@ -21,10 +21,12 @@ class Dashboard extends Component {
       image: '',
       info: '',
       flixList: [],
-      hideEditorPick: true
+      hideEditorPick: true,
+      toggleDark: false
     }
     this.deleteFlix = this.deleteFlix.bind(this)
     this.handleHidden = this.handleHidden.bind(this)
+    this.toggleDark = this.toggleDark.bind(this)
   }
   handleChange(e, key) {
     this.setState({
@@ -83,6 +85,11 @@ class Dashboard extends Component {
       hideEditorPick: !this.state.hideEditorPick
     })
   }
+  toggleDark = () => {
+    this.setState({
+      toggleDark: !this.state.toggleDark
+    })
+  }
 
   componentDidMount() {
     this.findFlix()
@@ -102,8 +109,16 @@ class Dashboard extends Component {
   }
   render() {
     const style = this.state.hideEditorPick ? { display: 'none' } : {}
+    const colorMode = this.state.toggleDark ? {
+      backgroundColor:'black',
+      color:'white'
+    } : {
+      backgroundColor:'white',
+      color:'black'
+    }
+    const bottomStyling = {padding: '0 0 30px 0', color:'rgba(0,0,0,.2)'}
     return (
-      <div className='Dashboard'>
+      <div className='Dashboard' style={colorMode}>
         <div className="add-flix-form">
           <input
             type="text"
@@ -188,6 +203,7 @@ class Dashboard extends Component {
         <div className="donate-button">
           <FontAwesomeIcon icon={faDonate} size="3x" onClick={() => this.props.history.push('/donate')} />
         </div>
+        <p style={bottomStyling} onClick={() => this.toggleDark()}>☽</p>
       </div>
     )
   }

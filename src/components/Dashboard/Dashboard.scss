@@ -4,7 +4,8 @@
 }
 
 .Dashboard > .add-flix-form {
-    margin: 1% 0 1% 0;
+    margin: 0 0 1% 0;
+    padding-top: 1%;
 }
 
 .Dashboard > .add-flix-form > img {
@@ -94,7 +95,8 @@
     .Dashboard > .add-flix-form {
         display:flex;
         flex-direction:column;
-        margin: 2% 5% 2% 5%;
+        margin: 0 5% 2% 5%;
+        padding-top: 2%;
     }
     .Dashboard > .add-flix-form > input{
         margin: 0 1% 1% 0;

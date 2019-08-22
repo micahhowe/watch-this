@@ -84,20 +84,17 @@ export default class Flix extends Component {
 
 
   render() {
-    //console.log(this.props)
     let { editFlix } = this.state
     const editStyle = this.state.editFlix ? {} : { display: 'none' }
     const style = this.state.toggleInfo ? {
       whiteSpace: 'initial',
       textOverflow: 'ellipsis',
       overflow: 'visible',
-      maxLines: 2
     } : {
       whiteSpace: 'pre',
       textOverflow: 'ellipsis',
       overflow: 'hidden'
     }
-    console.log(style.overflow)
     return (
       <div className="Flix">
         <div className="single-flix" style={this.props.priority >= 8 ? {boxShadow:'2px 0px lightgreen'} : this.props.priority > 4 ? {boxShadow:'2px 0px yellow'}:{boxShadow:'2px 0px red'}}>
