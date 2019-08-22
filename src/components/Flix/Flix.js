@@ -15,14 +15,22 @@ export default class Flix extends Component {
       image: '',
       info: '',
       editFlix: false,
-      flixPriority: props.priority
+      flixPriority: props.priority,
+      toggleInfo: false
     }
     this.updateFlix = this.updateFlix.bind(this)
     this.increasePriority = this.increasePriority.bind(this)
     this.decreasePriority = this.decreasePriority.bind(this)
+    // this.revealHiddenOverflow = this.revealHiddenOverflow.bind(this)
+    this.toggleInfo = this.toggleInfo.bind(this)
   }
   toggleEdit() {
     this.setState({ editFlix: !this.state.editFlix })
+  }
+  toggleInfo = () => {
+    this.setState({
+      toggleInfo: !this.state.toggleInfo
+    })
   }
   handleChange(e, key) {
     this.setState({
@@ -41,7 +49,7 @@ export default class Flix extends Component {
     this.setState({
       title: '',
       image: '',
-      info: ''
+      info: '',
     })
   }
   increasePriority(id) {
@@ -69,13 +77,27 @@ export default class Flix extends Component {
         alert('Sorry! Try decreasing again.')
       })
   }
-
+  // revealHiddenOverflow()
+  // { style.overflow === "hidden" ? {style.overflow = "visible" } :
+  //    {style.overflow = "hidden"}
+  // }
 
 
   render() {
     //console.log(this.props)
     let { editFlix } = this.state
     const editStyle = this.state.editFlix ? {} : { display: 'none' }
+    const style = this.state.toggleInfo ? {
+      whiteSpace: 'initial',
+      textOverflow: 'ellipsis',
+      overflow: 'visible',
+      maxLines: 2
+    } : {
+      whiteSpace: 'pre',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden'
+    }
+    console.log(style.overflow)
     return (
       <div className="Flix">
         <div className="single-flix" style={this.props.priority >= 8 ? {boxShadow:'2px 0px lightgreen'} : this.props.priority > 4 ? {boxShadow:'2px 0px yellow'}:{boxShadow:'2px 0px red'}}>
@@ -101,7 +123,11 @@ export default class Flix extends Component {
                         </select>
                     </div> */}
               </div>
-              <p className="flix-info-text">{this.props.info}</p>
+              <div className="individual-info" style={style}
+                  onClick={() => this.toggleInfo()}
+              >
+                <p className="flix-info-text">{this.props.info}</p>
+              </div>
             </div>
             <div className="flix-buttons">
               <div className="edit-button">

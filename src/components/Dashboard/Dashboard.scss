@@ -1,3 +1,8 @@
+@mixin thinGreyBorder {
+    border: .5px solid rgba(187, 187, 187, .5);
+    border-radius:35px;
+}
+
 .Dashboard > .add-flix-form {
     margin: 1% 0 1% 0;
 }
@@ -33,7 +38,7 @@
     flex-wrap: nowrap;
     margin: 1% 4% 1% 4%;
 }
-.add-westworld{
+%shared-editor-button-styling{
     display:flex;
     font-family: $font;
     border: .5px solid rgba(187, 187, 187, .5);
@@ -44,6 +49,9 @@
     max-width:25%;
     min-width:15%;
     margin-right:2%;
+}
+.add-westworld{
+    @extend %shared-editor-button-styling
 }
 .add-westworld > img {
     max-height:100px;
@@ -51,16 +59,8 @@
     border-radius:25px;
 }
 .add-stranger{
-    display:flex;
-    font-family: $font;
-    border: .5px solid rgba(187, 187, 187, .5);
-    border-radius:35px;
-    padding:0.5% 1% 0.5% 1%;
-    justify-content: space-between;
-    flex-direction: row;
-    max-width:25%;
-    min-width:15%;
-    margin-right:2%;
+    @extend %shared-editor-button-styling
+
 }
 .add-stranger > img {
     max-height:100px;
@@ -68,16 +68,8 @@
     border-radius:25px;
 }
 .add-lost{
-    display:flex;
-    font-family: $font;
-    border: .5px solid rgba(187, 187, 187, .5);
-    border-radius:35px;
-    padding:0.5% 1% 0.5% 1%;
-    justify-content: space-between;
-    flex-direction: row;
-    max-width:25%;
-    min-width:15%;
-    margin-right:2%;
+    @extend %shared-editor-button-styling
+
 }
 .add-lost > img {
     max-height:100px;
@@ -120,8 +112,7 @@
     .add-westworld{
         display:flex;
         font-family: $font;
-        border: .5px solid rgba(187, 187, 187, .5);
-        border-radius:35px;
+        @include thinGreyBorder;
         padding:1% 2% 1% 2%;
         justify-content: space-between;
         flex-direction: row;
@@ -132,8 +123,7 @@
     .add-stranger{
         display:flex;
         font-family: $font;
-        border: .5px solid rgba(187, 187, 187, .5);
-        border-radius:35px;
+        @include thinGreyBorder;
         padding:1% 2% 1% 2%;
         justify-content: space-between;
         flex-direction: row;
@@ -144,8 +134,7 @@
     .add-lost{
         display:flex;
         font-family: $font;
-        border: .5px solid rgba(187, 187, 187, .5);
-        border-radius:35px;
+        @include thinGreyBorder;
         padding:1% 2% 1% 2%;
         justify-content: space-between;
         flex-direction: row;

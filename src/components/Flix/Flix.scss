@@ -97,12 +97,12 @@ $borderRed: rgb(126, 0, 0);
         max-width:100px;
         border-radius:25px;
     }
-    p {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-      }
+    // p {
+    //     overflow: hidden;
+    //     display: -webkit-box;
+    //     -webkit-line-clamp: 3;
+    //     -webkit-box-orient: vertical;
+    //   }
       .top-info{
         display:flex;
         flex-direction:column;
@@ -146,12 +146,12 @@ $borderRed: rgb(126, 0, 0);
         max-width:120px;
         border-radius:25px;
     }
-    p {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-      }
+    // p {
+    //     overflow: hidden;
+    //     display: -webkit-box;
+    //     -webkit-line-clamp: 2;
+    //     -webkit-box-orient: vertical;
+    //   }
       .top-info{
         display:flex;
         flex-direction:row;
