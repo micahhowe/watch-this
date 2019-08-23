@@ -155,21 +155,31 @@ class Dashboard extends Component {
           <div id="my-picks" style={style}>
             <div className="add-westworld" onClick={() => this.addWestWorld()}>
               <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Westworld-season-2-images-700x300.jpg" alt="westworld characters" />
+              <div className="editor-content">
               <p>
                 Westworld
               </p>
+              <button>Add</button>
+              </div>
+              
             </div>
             <div className="add-stranger" onClick={() => this.addStranger()}>
             <img src="https://cdn.vox-cdn.com/thumbor/BbCaCZKm1rjdMHuI2YM96VS8l9s=/0x0:4400x2200/1200x800/filters:focal(1703x505:2407x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/64695953/ST3_Production_Still_4.0.jpg" alt="stranger things characters" />
+            <div className="editor-content">
               <p>
                 Stranger Things
               </p>
+              <button>Add</button>
+              </div>
             </div>
             <div className="add-lost" onClick={() => this.addLost()}>
             <img src="https://vignette.wikia.nocookie.net/lostpedia/images/6/69/Lost_cast.jpg/revision/latest?cb=20060514183120" alt="lost characters" />
+            <div className="editor-content">
               <p>
                 Lost
               </p>
+              <button>Add</button>
+              </div>
             </div>
           </div>
         </div>
