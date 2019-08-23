@@ -86,14 +86,17 @@ export default class Flix extends Component {
   render() {
     let { editFlix } = this.state
     const editStyle = this.state.editFlix ? {} : { display: 'none' }
+    const spanStyle = this.state.toggleInfo ? {display:'none'} : {color:'#66CCFF', fontSize:'18px'}
     const style = this.state.toggleInfo ? {
       whiteSpace: 'initial',
-      textOverflow: 'ellipsis',
-      overflow: 'visible',
+      // textOverflow: 'ellipsis',
+      overflow: 'visible'
     } : {
       whiteSpace: 'pre',
+      overflow: 'hidden',
       textOverflow: 'ellipsis',
-      overflow: 'hidden'
+      width: '100%',
+      display: 'inline-block'
     }
     return (
       <div className="Flix">
@@ -123,7 +126,13 @@ export default class Flix extends Component {
               <div className="individual-info" style={style}
                   onClick={() => this.toggleInfo()}
               >
-                <p className="flix-info-text">{this.props.info}</p>
+                
+          {this.props.info.length > 35 ? (
+            <>
+               <p className="flix-info-text"><span style={spanStyle}>+</span>{this.props.info}</p>
+            </>
+          ) : <p className="flix-info-text">{this.props.info}</p>}
+                {/* <p className="flix-info-text">{this.props.info}</p> */}
               </div>
             </div>
             <div className="flix-buttons">
