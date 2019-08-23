@@ -24,10 +24,10 @@ class Donation extends Component {
   }
 
   onClosed = () => {
-    console.log('this is closed')
+    console.log(this.state.amount)
   }
 
-  onToken = (token) => {
+  onToken = async (token) => {
     let { amount } = this.state
     amount /= 100
     
@@ -63,30 +63,67 @@ class Donation extends Component {
           <FontAwesomeIcon icon={faArrowLeft} size="4x" />
 
         </div>
+        Please show your support for the developer by making a donation!
         <div className="stripe-elements">
-          <p>Please enter Donation amount in cents</p>
-        <input value={this.state.amount}
+          
+        {/* <input value={this.state.amount}
             type='number'
             onChange={e => this.setState({ amount: +e.target.value })}
-          />
+          /> */}
+          <div className="099" onClick={e => this.setState({amount: +99})}>
           <StripeCheckout
-            name={`Support Watch This`} //header
-            image={imageUrl}
-            description='Thanks for making a donation!' //subtitle - beneath header
-            stripeKey={process.env.REACT_APP_STRIPE_KEY}
-            token={this.onToken} //fires the call back
-            amount={this.state.amount} //this will be in cents
-            currency="USD"
-            panelLabel="Submit Donation" //text on the submit button
-            locale="en"
-            opened={this.onOpened} //fires cb when stripe is opened
-            closed={this.onClosed} //fires cb when stripe is closed
-            allowRememberMe
-            billingAddress={false}
-            zipCode={false}
-            label="Make Donation"
-          />
-          
+          name={`Support Watch This`} //header
+          image={imageUrl}
+          description='Thanks for making a donation!' //subtitle - beneath header
+          stripeKey={process.env.REACT_APP_STRIPE_KEY}
+          token={this.onToken} //fires the call back
+          amount={99} //this will be in cents
+          currency="USD"
+          panelLabel="Submit Donation" //text on the submit button
+          locale="en"
+          opened={this.onOpened} //fires cb when stripe is opened
+          closed={this.onClosed} //fires cb when stripe is closed
+          allowRememberMe
+          billingAddress={false}
+          zipCode={false}
+          label="$0.99"
+          /></div>
+          <div className="499" onClick={e => this.setState({amount: +499})}>
+          <StripeCheckout
+          name={`Support Watch This`} //header
+          image={imageUrl}
+          description='Thanks for making a donation!' //subtitle - beneath header
+          stripeKey={process.env.REACT_APP_STRIPE_KEY}
+          token={this.onToken} //fires the call back
+          amount={'499'} //this will be in cents
+          currency="USD"
+          panelLabel="Submit Donation" //text on the submit button
+          locale="en"
+          opened={this.onOpened} //fires cb when stripe is opened
+          closed={this.onClosed} //fires cb when stripe is closed
+          allowRememberMe
+          billingAddress={false}
+          zipCode={false}
+          label="$4.99"
+          /></div>
+          <div className="999" onClick={e => this.setState({amount: +999})}>
+          <StripeCheckout
+          name={`Support Watch This`} //header
+          image={imageUrl}
+          description='Thanks for making a donation!' //subtitle - beneath header
+          stripeKey={process.env.REACT_APP_STRIPE_KEY}
+          token={this.onToken} //fires the call back
+          amount={'999'} //this will be in cents
+          currency="USD"
+          panelLabel="Submit Donation" //text on the submit button
+          locale="en"
+          opened={this.onOpened} //fires cb when stripe is opened
+          closed={this.onClosed} //fires cb when stripe is closed
+          allowRememberMe
+          billingAddress={false}
+          zipCode={false}
+          label="$9.99"
+          /></div>
         </div>
       </div>
     )
@@ -102,4 +139,4 @@ export default connect(
   mapStateToProps,
   { setUser }
 )(Donation)
-const imageUrl = 'https://cdn.pixabay.com/photo/2014/10/23/10/10/dollar-499481_960_720.jpg'
+const imageUrl = 'https://www.computerhope.com/jargon/d/dollarsign.jpg'
