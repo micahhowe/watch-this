@@ -9,6 +9,9 @@
 @import './components/Dashboard/Dashboard.scss';
 @import './components/Donation/Donation.scss';
 
+body{
+  height: 100vh;
+}
 button{
   outline: none;
 }

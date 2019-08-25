@@ -115,7 +115,7 @@ class Dashboard extends Component {
       backgroundColor:'white',
       color:'black'
     }
-    const bottomStyling = {padding: '0 0 30px 0', color:'rgba(0,0,0,.2)'}
+    const bottomStyling = {padding: '0 0 15px 0', color:'rgba(0,0,0,.2)'}
     return (
       <div className='Dashboard' style={colorMode}>
         <div className="add-flix-form">
@@ -212,7 +212,7 @@ class Dashboard extends Component {
         <div className="donate-button">
           <FontAwesomeIcon icon={faDonate} size="3x" onClick={() => this.props.history.push('/donate')} />
         </div>
-        <p style={bottomStyling} onClick={() => this.toggleDark()}>☽</p>
+        <p style={bottomStyling, colorMode} onClick={() => this.toggleDark()}>☽</p>
       </div>
     )
   }
