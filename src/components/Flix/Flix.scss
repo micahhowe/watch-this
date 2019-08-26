@@ -87,15 +87,16 @@ $borderRed: rgb(126, 0, 0);
   }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+   
     .flix-info{
-        width:110px;
+        width:70px;
     }
     .flix-image{
         display:flex;
         // VVVV This is a temporary measure to get the image to appear sort of center within flix
         margin: 22% 0 22% 0;
-        max-height:100px;
-        max-width:100px;
+        max-height:85px;
+        max-width:85px;
         border-radius:25px;
     }
     // p {
@@ -137,6 +138,7 @@ $borderRed: rgb(126, 0, 0);
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    
     .flix-info{
         width:200px;
     }

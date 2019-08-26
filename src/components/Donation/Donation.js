@@ -19,14 +19,6 @@ class Donation extends Component {
 
   }
 
-  onOpened = () => {
-    console.log('this is opened')
-  }
-
-  onClosed = () => {
-    console.log(this.state.amount)
-  }
-
   onToken = async (token) => {
     let { amount } = this.state
     amount /= 100
@@ -57,6 +49,7 @@ class Donation extends Component {
     this.setState({ [prop]: e.target.value })
   }
   render() {
+    let buttonSpacing = {margin: '0 2% 0 0'}
     return (
       <div className='Donation' >
         <div className="back-button" onClick={() => this.props.history.push('/dashboard')}>
@@ -66,10 +59,6 @@ class Donation extends Component {
         Please show your support for the developer by making a donation!
         <div className="stripe-elements">
           
-        {/* <input value={this.state.amount}
-            type='number'
-            onChange={e => this.setState({ amount: +e.target.value })}
-          /> */}
           <div className="099" onClick={e => this.setState({amount: +99})}>
           <StripeCheckout
           name={`Support Watch This`} //header
@@ -81,12 +70,11 @@ class Donation extends Component {
           currency="USD"
           panelLabel="Submit Donation" //text on the submit button
           locale="en"
-          opened={this.onOpened} //fires cb when stripe is opened
-          closed={this.onClosed} //fires cb when stripe is closed
           allowRememberMe
           billingAddress={false}
           zipCode={false}
           label="$0.99"
+          style={buttonSpacing}
           /></div>
           <div className="499" onClick={e => this.setState({amount: +499})}>
           <StripeCheckout
@@ -99,12 +87,11 @@ class Donation extends Component {
           currency="USD"
           panelLabel="Submit Donation" //text on the submit button
           locale="en"
-          opened={this.onOpened} //fires cb when stripe is opened
-          closed={this.onClosed} //fires cb when stripe is closed
           allowRememberMe
           billingAddress={false}
           zipCode={false}
           label="$4.99"
+          style={buttonSpacing}
           /></div>
           <div className="999" onClick={e => this.setState({amount: +999})}>
           <StripeCheckout
@@ -117,8 +104,6 @@ class Donation extends Component {
           currency="USD"
           panelLabel="Submit Donation" //text on the submit button
           locale="en"
-          opened={this.onOpened} //fires cb when stripe is opened
-          closed={this.onClosed} //fires cb when stripe is closed
           allowRememberMe
           billingAddress={false}
           zipCode={false}

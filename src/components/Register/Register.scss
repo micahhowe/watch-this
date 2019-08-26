@@ -19,7 +19,7 @@ $babyblue: #66CCFF;
     height: 200px;
     border: 2px solid black;
     border-radius: 7px;
-    width: 50%;
+    width: 45%;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
@@ -44,7 +44,7 @@ $babyblue: #66CCFF;
       background-color:$babyblue;
       padding:5px;
       border-radius:15px;
-      margin: 0 25% 0 0;
+      margin: 0 58% 0 0;
   }
 //   .auth-buttons > .login > button{
 //     min-width:80px;
@@ -70,4 +70,8 @@ $babyblue: #66CCFF;
     margin: 1% 0 0 1%;
   }
 
-  
+  @media only screen and (max-width: 600px) {
+    .Register .inputs-container {
+      margin: 0 20% 0 0;
+    }
+  }

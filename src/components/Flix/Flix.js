@@ -148,11 +148,11 @@ export default class Flix extends Component {
               <button onClick={() => this.props.deleteFlix(this.props.id)}>Remove</button>
             </div>
             <div className="flix-arrows">
-              <FontAwesomeIcon onClick={this.props.priority <= 9 ? () => this.increasePriority(this.props.id) : null} icon={faSortUp} size="3x" />
+              <FontAwesomeIcon onClick={this.props.priority <= 9 ? () => this.increasePriority(this.props.id) : null} icon={faSortUp} size="2x" />
               <p>
               {this.props.priority * 10}% 
               </p>
-              <FontAwesomeIcon onClick={this.props.priority > 0 ? () => this.decreasePriority(this.props.id) : null } icon={faSortDown} size="3x" />
+              <FontAwesomeIcon onClick={this.props.priority > 0 ? () => this.decreasePriority(this.props.id) : null } icon={faSortDown} size="2x" />
             </div>
             {/* Add a big div for everything above */}
           </div>
