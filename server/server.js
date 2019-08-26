@@ -20,6 +20,9 @@ app.use(session({
       maxAge: 1000 * 60 * 60 * 24 * 10
     }
   }))
+
+  app.use( express.static( `${__dirname}/../build` ) );
+
   //authController
   app.post('/auth/register', authCtrl.register)
   app.post('/auth/login', authCtrl.login)
