@@ -39,15 +39,21 @@
     flex-wrap: nowrap;
     margin: 1% 4% 1% 4%;
 }
+.editor-content{
+    padding: 0 6% 0 4%;
+}
+.editor-content > button {
+    min-width:45px;
+}
 %shared-editor-button-styling{
     display:flex;
     font-family: $font;
     border: .5px solid rgba(187, 187, 187, .5);
     border-radius:35px;
     padding:0.5% 1% 0.5% 1%;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
-    max-width:25%;
+    max-width:28%;
     min-width:15%;
     margin-right:2%;
 }
@@ -58,15 +64,23 @@
     max-height:100px;
     max-width:100px;
     border-radius:25px;
+    padding: 0 2% 0 0;
 }
-.add-stranger{
+.add-westworld > button {
+    min-width:80px;
+    background-color:$babyblue;
+    padding:5px;
+    border-radius:15px;
+}
+.add-seinfeld{
     @extend %shared-editor-button-styling
 
 }
-.add-stranger > img {
+.add-seinfeld> img {
     max-height:100px;
     max-width:100px;
     border-radius:25px;
+    padding: 0 2% 0 0;
 }
 .add-lost{
     @extend %shared-editor-button-styling
@@ -76,6 +90,7 @@
     max-height:100px;
     max-width:100px;
     border-radius:25px;
+    padding: 0 2% 0 0;
 }
 .donate-button {
     // position: fixed;
@@ -84,10 +99,18 @@
     color: #66CCFF;
     display:flex;
     justify-content:center;
-    margin: 2% 0 10px 47%;
-    padding-top: 5%;
+    margin: 2% 0 0px 42%;
+    padding: 5% 0 2% 0;
     display:block;
   }
+#dark-mode-button {
+    display:flex;
+    padding: 0.1% 0 2px 3.5%;
+    margin-top: -5px;
+}
+#dark-mode-button:hover{
+    cursor: pointer;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -115,18 +138,18 @@
         display:flex;
         font-family: $font;
         @include thinGreyBorder;
-        padding:1% 2% 1% 2%;
+        padding:1% 6% 1% 4%;
         justify-content: space-between;
         flex-direction: row;
         max-width:80%;
         min-width:15%;
         margin-right:2%;
     }
-    .add-stranger{
+    .add-seinfeld{
         display:flex;
         font-family: $font;
         @include thinGreyBorder;
-        padding:1% 2% 1% 2%;
+        padding:1% 6% 1% 3%;
         justify-content: space-between;
         flex-direction: row;
         max-width:80%;
@@ -137,7 +160,7 @@
         display:flex;
         font-family: $font;
         @include thinGreyBorder;
-        padding:1% 2% 1% 2%;
+        padding:1% 6% 1% 3%;
         justify-content: space-between;
         flex-direction: row;
         max-width:80%;
@@ -155,6 +178,51 @@
         padding-top: 5%;
         display:block;
       }
+    
+} 
+/* Extra slightly larger devices (phones, 700px and down) */
+@media only screen and (max-width: 675px) {
+
+    #my-picks{
+        display:flex;
+        flex-wrap: nowrap;
+        margin: 1% 3% 1% 3%;
+        flex-direction:column;
+    }
+    .add-westworld{
+        display:flex;
+        font-family: $font;
+        @include thinGreyBorder;
+        padding:1% 6% 1% 3%;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width:80%;
+        min-width:15%;
+        margin-right:2%;
+    }
+    .add-seinfeld{
+        display:flex;
+        font-family: $font;
+        @include thinGreyBorder;
+        padding:1% 6% 1% 3%;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width:80%;
+        min-width:15%;
+        margin-right:2%;
+    }
+    .add-lost{
+        display:flex;
+        font-family: $font;
+        @include thinGreyBorder;
+        padding:1% 6% 1% 3%;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width:80%;
+        min-width:15%;
+        margin-right:2%;
+    }
+    
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -166,6 +234,26 @@
         padding:0.5%;
         height:22px;
     }
+    .add-westworld > img {
+        max-height:80px;
+        max-width:80px;
+        border-radius:25px;
+        padding: 0 2% 0 1%;
+    }
+    .add-seinfeld> img {
+        max-height:80px;
+        max-width:80px;
+        border-radius:25px;
+        padding: 0 2% 0 1%;
+    }
+    
+    .add-lost > img {
+        max-height:80px;
+        max-width:80px;
+        border-radius:25px;
+        padding: 0 2% 0 1%;
+    }
+    
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -177,6 +265,25 @@
         padding:0.5%;
         height:22px;
     }
+    .add-westworld > img {
+        max-height:90px;
+        max-width:90px;
+        border-radius:25px;
+        padding: 0 2% 0 0;
+    }
+    .add-seinfeld> img {
+        max-height:90px;
+        max-width:90px;
+        border-radius:25px;
+        padding: 0 2% 0 0;
+    }
+    
+    .add-lost > img {
+        max-height:90px;
+        max-width:90px;
+        border-radius:25px;
+        padding: 0 2% 0 0;
+    }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -187,6 +294,25 @@
         border: .5px solid rgba(141, 141, 141, .5);
         padding:0.5%;
         height:22px;
+    }
+    .add-westworld > img {
+        max-height:100px;
+        max-width:100px;
+        border-radius:25px;
+        padding: 0 2% 0 0;
+    }
+    .add-seinfeld> img {
+        max-height:100px;
+        max-width:100px;
+        border-radius:25px;
+        padding: 0 2% 0 0;
+    }
+    
+    .add-lost > img {
+        max-height:100px;
+        max-width:100px;
+        border-radius:25px;
+        padding: 0 2% 0 0;
     }
 } 
 
@@ -208,4 +334,5 @@
     .Dashboard > .add-flix-form > input{
         padding: .3%;
     }
+    
 }

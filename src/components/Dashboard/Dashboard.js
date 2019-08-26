@@ -62,11 +62,11 @@ class Dashboard extends Component {
     })
     this.createFlix()
   }
-  addStranger = async () => {
+  addSeinfeld = async () => {
     await this.setState({
-      title: 'Stranger Things',
-      image: 'https://cdn.vox-cdn.com/thumbor/BbCaCZKm1rjdMHuI2YM96VS8l9s=/0x0:4400x2200/1200x800/filters:focal(1703x505:2407x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/64695953/ST3_Production_Still_4.0.jpg',
-      info: 'Streaming on Netflix'
+      title: 'Seinfeld',
+      image: 'https://cdn.vox-cdn.com/thumbor/SS8_msFbRrwh8WkeuFTJqnySlwg=/0x0:1536x1150/1200x800/filters:focal(573x226:817x470)/cdn.vox-cdn.com/uploads/chorus_image/image/64669158/seinfeldcast.0.1498614946.0.jpg',
+      info: 'Streaming on Hulu'
     })
     this.createFlix()
   }
@@ -115,7 +115,7 @@ class Dashboard extends Component {
       backgroundColor:'white',
       color:'black'
     }
-    const bottomStyling = {padding: '0 0 15px 0', color:'rgba(0,0,0,.2)'}
+    // const bottomStyling = {padding: '0 0 15px 0', color:'rgba(0,0,0,.2)'}
     return (
       <div className='Dashboard' style={colorMode}>
         <div className="add-flix-form">
@@ -150,8 +150,8 @@ class Dashboard extends Component {
           <div className="editors-picks-button" onClick={() => this.handleHidden()}>
             <span id="editor-text">Editors' Picks</span>
             <FontAwesomeIcon icon={faSortDown} size="1x" />
+          <p id="dark-mode-button" style={colorMode} onClick={() => this.toggleDark()}>☽</p>
           </div>
-
           <div id="my-picks" style={style}>
             <div className="add-westworld" onClick={() => this.addWestWorld()}>
               <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Westworld-season-2-images-700x300.jpg" alt="westworld characters" />
@@ -163,11 +163,11 @@ class Dashboard extends Component {
               </div>
               
             </div>
-            <div className="add-stranger" onClick={() => this.addStranger()}>
-            <img src="https://cdn.vox-cdn.com/thumbor/BbCaCZKm1rjdMHuI2YM96VS8l9s=/0x0:4400x2200/1200x800/filters:focal(1703x505:2407x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/64695953/ST3_Production_Still_4.0.jpg" alt="stranger things characters" />
+            <div className="add-seinfeld" onClick={() => this.addSeinfeld()}>
+            <img src="https://cdn.vox-cdn.com/thumbor/SS8_msFbRrwh8WkeuFTJqnySlwg=/0x0:1536x1150/1200x800/filters:focal(573x226:817x470)/cdn.vox-cdn.com/uploads/chorus_image/image/64669158/seinfeldcast.0.1498614946.0.jpg" alt="seinfeld characters" />
             <div className="editor-content">
               <p>
-                Stranger Things
+                Seinfeld
               </p>
               <button>Add</button>
               </div>
@@ -212,7 +212,7 @@ class Dashboard extends Component {
         <div className="donate-button">
           <FontAwesomeIcon icon={faDonate} size="3x" onClick={() => this.props.history.push('/donate')} />
         </div>
-        <p style={bottomStyling, colorMode} onClick={() => this.toggleDark()}>☽</p>
+        
       </div>
     )
   }
