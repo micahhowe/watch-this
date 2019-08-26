@@ -147,9 +147,9 @@ class Dashboard extends Component {
           <button id="add-flix-button" onClick={() => this.createFlix()}>Add Flix</button>
         </div>
         <div className="editors-picks">
-          <div className="editors-picks-button" onClick={() => this.handleHidden()}>
-            <span id="editor-text">Editors' Picks</span>
-            <FontAwesomeIcon icon={faSortDown} size="1x" />
+          <div className="editors-picks-button">
+            <span onClick={() => this.handleHidden()} id="editor-text">Editors' Picks</span>
+            <FontAwesomeIcon onClick={() => this.handleHidden()} icon={faSortDown} size="1x" />
           <p id="dark-mode-button" style={colorMode} onClick={() => this.toggleDark()}>☽</p>
           </div>
           <div id="my-picks" style={style}>
