@@ -14,7 +14,7 @@ body{
 }
 button{
   outline: none;
-  
+  font-size: 14px;
   background-color:$babyblue;
   padding:5px;
   border-radius:15px;
@@ -68,6 +68,9 @@ input {
     margin-left: 15%;
   }
   input{
+    font-size:12px;
+  }
+  button{
     font-size:12px;
   }
 } 
