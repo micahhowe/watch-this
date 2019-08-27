@@ -5,6 +5,7 @@ import { setUser } from '../../ducks/reducer'
 import { logoutUser } from '../../ducks/reducer'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
+import Swal from 'sweetalert2'
 
 
 class Nav extends Component {
@@ -23,7 +24,12 @@ class Nav extends Component {
          
          {this.props.username ? (
           <>
-          <h5>{this.props.username}</h5>
+          <h5 onClick={() => Swal.fire({
+        title:'Hey There!',
+        text:`You are currently signed in as ${this.props.username}!`,
+        type: 'info',
+        margin:'3em 0 0 0',
+          })}>{this.props.username}</h5>
           </>
           ) : <h5>|</h5>}
          <h5 onClick={this.logout}>Logout</h5>
