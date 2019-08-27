@@ -57,8 +57,8 @@ class Dashboard extends Component {
   addWestWorld = async () => {
     await this.setState({
       title: 'Westworld',
-      image: 'https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Westworld-season-2-images-700x300.jpg',
-      info: 'Streaming on HBO'
+      image: 'https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2016/10/westworld_still_6.jpg',
+      info: 'Is it a Western? Is it a show about Robots? Evan Rachel Wood, Anthony Hopkins, and Ed Harris star in this HBO series.'
     })
     this.createFlix()
   }
@@ -66,7 +66,7 @@ class Dashboard extends Component {
     await this.setState({
       title: 'Seinfeld',
       image: 'https://cdn.vox-cdn.com/thumbor/SS8_msFbRrwh8WkeuFTJqnySlwg=/0x0:1536x1150/1200x800/filters:focal(573x226:817x470)/cdn.vox-cdn.com/uploads/chorus_image/image/64669158/seinfeldcast.0.1498614946.0.jpg',
-      info: 'Streaming on Hulu'
+      info: 'A show about nothing. Enjoy Jerry Seinfeld, Elaine, Kramer, and George Costanza live their life in NYC. Currently Streaming on Hulu'
     })
     this.createFlix()
   }
@@ -74,7 +74,7 @@ class Dashboard extends Component {
     await this.setState({
       title: 'Lost',
       image: 'https://vignette.wikia.nocookie.net/lostpedia/images/6/69/Lost_cast.jpg/revision/latest?cb=20060514183120',
-      info: 'Available on Hulu'
+      info: 'Watch Survivors of Oceanic Flight 815 on a mysterious island. Co-created by J.J. Abrams. (4 8 15 16 23 42) Currently Available on Hulu'
     })
     this.createFlix()
   }
@@ -154,7 +154,7 @@ class Dashboard extends Component {
           </div>
           <div id="my-picks" style={style}>
             <div className="add-westworld" onClick={() => this.addWestWorld()}>
-              <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Westworld-season-2-images-700x300.jpg" alt="westworld characters" />
+              <img src="https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2016/10/westworld_still_6.jpg" alt="westworld characters" />
               <div className="editor-content">
               <p>
                 Westworld

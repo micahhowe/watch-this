@@ -31,6 +31,9 @@ $borderRed: rgb(126, 0, 0);
     display:flex;
     flex-direction: column;
 }
+.individual-info:hover{
+    cursor: pointer;
+}
 .flix-buttons{
     display:flex;
     flex-direction:column;
