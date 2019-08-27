@@ -19,6 +19,10 @@ button{
   padding:5px;
   border-radius:15px;
 }
+button:hover {
+  cursor: pointer;
+}
+
 input {
   height:22px;
 }
@@ -32,11 +36,15 @@ input {
   margin-left: 25%;
   /* Lets make this percentage responsive based on screen width */
 }
+.Nav h3:hover{
+  cursor:pointer;
+}
 .Nav h5 {
   margin-right:3%;
 }
 .Nav h5:hover {
   color:white;
+  cursor:pointer;
 }
 
 .donate-button:hover{

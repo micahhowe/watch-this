@@ -54,6 +54,12 @@ $borderRed: rgb(126, 0, 0);
     justify-content:space-around;  
     align-content: flex-end;    
 }
+.fa-sort-up{
+    cursor: pointer;
+}
+.fa-sort-down{
+    cursor: pointer;
+}
 .flix-arrows > p{
     color:rgb(100, 100, 100);
     margin: 0 0 0 0;

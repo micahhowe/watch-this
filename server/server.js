@@ -1,5 +1,5 @@
 require('dotenv').config()
-const path = require('path');
+// const path = require('path');
 const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
@@ -41,9 +41,9 @@ app.use(session({
   app.post('/api/payment', donationCtrl.pay)
  
   //Hosting endpoint
-  app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-});
+//   app.get('*', (req, res)=>{
+//     res.sendFile(path.join(__dirname, '../build/index.html'));
+// });
 
 massive(CONNECTION_STRING).then(dbInstance => {
   app.set('db', dbInstance)
