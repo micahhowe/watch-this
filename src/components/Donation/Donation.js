@@ -54,7 +54,6 @@ class Donation extends Component {
       <div className='Donation' >
         <div className="back-button" onClick={() => this.props.history.push('/dashboard')}>
           <FontAwesomeIcon icon={faArrowLeft} size="4x" />
-
         </div>
         Please show your support for the developer by making a donation!
         <div className="stripe-elements">
@@ -110,6 +109,7 @@ class Donation extends Component {
           label="$9.99"
           /></div>
         </div>
+        
       </div>
     )
   }

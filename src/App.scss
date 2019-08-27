@@ -12,6 +12,7 @@
 body{
   height: 100vh;
 }
+
 button{
   outline: none;
   font-size: 14px;
@@ -21,6 +22,8 @@ button{
 }
 button:hover {
   cursor: pointer;
+  border:1px solid $babyblue;
+  box-shadow: 0 0 5px $babyblue;
 }
 
 input {
@@ -57,9 +60,10 @@ input {
   left:0;
   margin: 1% 0 0 1%;
 }
-.Donation:hover {
-  cursor: pointer;
+.Donation > .back-button {
+  cursor:pointer;
 }
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
