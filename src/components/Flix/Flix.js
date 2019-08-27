@@ -177,7 +177,7 @@ export default class Flix extends Component {
             />
             {this.state.image.length > 7 ? (
               <>
-                <img style={{ maxHeight: 200 }} src={this.state.image} alt='' />
+                <img style={{ maxHeight: '150px' }} src={this.state.image} alt='' />
               </>
             ) : null}
             {/* ^^^ this is the solution to the get /whatevertheinput value bug is */}
