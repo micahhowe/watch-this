@@ -39,29 +39,13 @@ $babyblue: #66CCFF;
     border:1px solid $babyblue;
     box-shadow: 0 0 5px $babyblue;
   }
-  .auth-buttons > .register > button{
-      min-width:80px;
-      background-color:$babyblue;
-      padding:5px;
-      border-radius:15px;
-      margin: 0 58% 0 0;
-  }
-//   .auth-buttons > .login > button{
-//     min-width:80px;
-//     background-color:#$babyblue;
-//     padding:5px;
-//     border-radius:15px;
-// }
+
   .register{
     display:flex;
     flex:1;
-    padding: 0 20% 0 20%;
+    padding: 0 10% 0 10%;
   }
-  // .login{
-  //   display:flex;
-  //   flex:1;
-  //   padding: 0 20% 0 20%;
-  // }
+  
   .Register > .back-button {
     display:flex;
     max-width:80px;
@@ -70,8 +54,44 @@ $babyblue: #66CCFF;
     margin: 1% 0 0 1%;
   }
 
-  @media only screen and (max-width: 600px) {
-    .Register .inputs-container {
-      margin: 0 20% 0 0;
-    }
+ 
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Register .inputs-container {
+    margin: 0 20% 0 0;
   }
+  .auth-buttons > .register > button{
+    min-width:80px;
+    background-color:$babyblue;
+    padding:5px;
+    border-radius:15px;
+    margin: 0 58% 0 0;
+}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .auth-buttons > .register > button{
+    min-width:80px;
+    background-color:$babyblue;
+    padding:5px;
+    border-radius:15px;
+    margin: 0 58% 0 0;
+}
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
