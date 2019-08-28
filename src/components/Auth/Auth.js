@@ -4,6 +4,7 @@ import { setUser } from '../../ducks/reducer'
 import { connect } from 'react-redux'
 import '../../App.scss'
 import {Link} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 
@@ -18,22 +19,7 @@ class Auth extends Component {
       [key]: e.target.value
     })
   }
-//   registerUser = () => {
-//     const {
-//       usernameInput: username,
-//       emailInput: email,
-//       passwordInput: password,
-//     } = this.state
-//     axios
-//       .post('/auth/register', { username, email, password,})
-//       .then(res => {
-//         this.props.setUser({ username, email})
-//         this.props.history.push('/dashboard')
-//       })
-//       .catch(err => {
-//         alert('Email is already in use.')
-//       })
-//   }
+
   login = () => {
     const {emailInput: email, passwordInput: password} = this.state
     axios.post('/auth/login', {email, password}).then(res => {
@@ -42,9 +28,14 @@ class Auth extends Component {
       this.props.history.push('/dashboard')
     })
     .catch(err => {
-      alert('Sorry! Try again.')
+      Swal.fire({
+        type: 'error',
+        title: 'Oops...',
+        text: 'Login Failed!'
+      })
     })
   }
+  
   render() {
     return (
       <div className="Auth">
@@ -54,11 +45,6 @@ class Auth extends Component {
             <div className="Logo">
             Watch This
             </div>
-            {/* <input
-              onChange={e => this.handleChange(e, 'usernameInput')}
-              type="text"
-              placeholder="Username"
-            /> */}
             <input
               onChange={e => this.handleChange(e, 'emailInput')}
               type="text"

@@ -36,17 +36,7 @@ class Register extends Component {
         alert('Email is already in use.')
       })
   }
-//   login = () => {
-//     const {emailInput: email, passwordInput: password} = this.state
-//     axios.post('/auth/login', {email, password}).then(res => {
-//       const {username, email} = res.data.user
-//       this.props.setUser({username, email})
-//       this.props.history.push('/dashboard')
-//     })
-//     .catch(err => {
-//       alert('Sorry! Try again.')
-//     })
-//   }
+
   render() {
     return (
       <div className="Register">
